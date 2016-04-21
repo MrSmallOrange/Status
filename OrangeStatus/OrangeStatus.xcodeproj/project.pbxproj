@@ -1,0 +1,521 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		378E461B1CC8ACFA00DE8EF5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 378E461A1CC8ACFA00DE8EF5 /* main.m */; };
+		378E461E1CC8ACFA00DE8EF5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 378E461D1CC8ACFA00DE8EF5 /* AppDelegate.m */; };
+		378E46211CC8ACFA00DE8EF5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 378E46201CC8ACFA00DE8EF5 /* ViewController.m */; };
+		378E46241CC8ACFA00DE8EF5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 378E46221CC8ACFA00DE8EF5 /* Main.storyboard */; };
+		378E46261CC8ACFA00DE8EF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 378E46251CC8ACFA00DE8EF5 /* Assets.xcassets */; };
+		378E46291CC8ACFA00DE8EF5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 378E46271CC8ACFA00DE8EF5 /* LaunchScreen.storyboard */; };
+		378E46341CC8ACFA00DE8EF5 /* OrangeStatusTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 378E46331CC8ACFA00DE8EF5 /* OrangeStatusTests.m */; };
+		378E463F1CC8ACFA00DE8EF5 /* OrangeStatusUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 378E463E1CC8ACFA00DE8EF5 /* OrangeStatusUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		378E46301CC8ACFA00DE8EF5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 378E460E1CC8ACFA00DE8EF5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 378E46151CC8ACFA00DE8EF5;
+			remoteInfo = OrangeStatus;
+		};
+		378E463B1CC8ACFA00DE8EF5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 378E460E1CC8ACFA00DE8EF5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 378E46151CC8ACFA00DE8EF5;
+			remoteInfo = OrangeStatus;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		378E46161CC8ACFA00DE8EF5 /* OrangeStatus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OrangeStatus.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		378E461A1CC8ACFA00DE8EF5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		378E461C1CC8ACFA00DE8EF5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		378E461D1CC8ACFA00DE8EF5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		378E461F1CC8ACFA00DE8EF5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		378E46201CC8ACFA00DE8EF5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		378E46231CC8ACFA00DE8EF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		378E46251CC8ACFA00DE8EF5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		378E46281CC8ACFA00DE8EF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		378E462A1CC8ACFA00DE8EF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		378E462F1CC8ACFA00DE8EF5 /* OrangeStatusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OrangeStatusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		378E46331CC8ACFA00DE8EF5 /* OrangeStatusTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OrangeStatusTests.m; sourceTree = "<group>"; };
+		378E46351CC8ACFA00DE8EF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		378E463A1CC8ACFA00DE8EF5 /* OrangeStatusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OrangeStatusUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		378E463E1CC8ACFA00DE8EF5 /* OrangeStatusUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OrangeStatusUITests.m; sourceTree = "<group>"; };
+		378E46401CC8ACFA00DE8EF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		378E46131CC8ACFA00DE8EF5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		378E462C1CC8ACFA00DE8EF5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		378E46371CC8ACFA00DE8EF5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		378E460D1CC8ACFA00DE8EF5 = {
+			isa = PBXGroup;
+			children = (
+				378E46181CC8ACFA00DE8EF5 /* OrangeStatus */,
+				378E46321CC8ACFA00DE8EF5 /* OrangeStatusTests */,
+				378E463D1CC8ACFA00DE8EF5 /* OrangeStatusUITests */,
+				378E46171CC8ACFA00DE8EF5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		378E46171CC8ACFA00DE8EF5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				378E46161CC8ACFA00DE8EF5 /* OrangeStatus.app */,
+				378E462F1CC8ACFA00DE8EF5 /* OrangeStatusTests.xctest */,
+				378E463A1CC8ACFA00DE8EF5 /* OrangeStatusUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		378E46181CC8ACFA00DE8EF5 /* OrangeStatus */ = {
+			isa = PBXGroup;
+			children = (
+				378E461C1CC8ACFA00DE8EF5 /* AppDelegate.h */,
+				378E461D1CC8ACFA00DE8EF5 /* AppDelegate.m */,
+				378E461F1CC8ACFA00DE8EF5 /* ViewController.h */,
+				378E46201CC8ACFA00DE8EF5 /* ViewController.m */,
+				378E46221CC8ACFA00DE8EF5 /* Main.storyboard */,
+				378E46251CC8ACFA00DE8EF5 /* Assets.xcassets */,
+				378E46271CC8ACFA00DE8EF5 /* LaunchScreen.storyboard */,
+				378E462A1CC8ACFA00DE8EF5 /* Info.plist */,
+				378E46191CC8ACFA00DE8EF5 /* Supporting Files */,
+			);
+			path = OrangeStatus;
+			sourceTree = "<group>";
+		};
+		378E46191CC8ACFA00DE8EF5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				378E461A1CC8ACFA00DE8EF5 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		378E46321CC8ACFA00DE8EF5 /* OrangeStatusTests */ = {
+			isa = PBXGroup;
+			children = (
+				378E46331CC8ACFA00DE8EF5 /* OrangeStatusTests.m */,
+				378E46351CC8ACFA00DE8EF5 /* Info.plist */,
+			);
+			path = OrangeStatusTests;
+			sourceTree = "<group>";
+		};
+		378E463D1CC8ACFA00DE8EF5 /* OrangeStatusUITests */ = {
+			isa = PBXGroup;
+			children = (
+				378E463E1CC8ACFA00DE8EF5 /* OrangeStatusUITests.m */,
+				378E46401CC8ACFA00DE8EF5 /* Info.plist */,
+			);
+			path = OrangeStatusUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		378E46151CC8ACFA00DE8EF5 /* OrangeStatus */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 378E46431CC8ACFA00DE8EF5 /* Build configuration list for PBXNativeTarget "OrangeStatus" */;
+			buildPhases = (
+				378E46121CC8ACFA00DE8EF5 /* Sources */,
+				378E46131CC8ACFA00DE8EF5 /* Frameworks */,
+				378E46141CC8ACFA00DE8EF5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OrangeStatus;
+			productName = OrangeStatus;
+			productReference = 378E46161CC8ACFA00DE8EF5 /* OrangeStatus.app */;
+			productType = "com.apple.product-type.application";
+		};
+		378E462E1CC8ACFA00DE8EF5 /* OrangeStatusTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 378E46461CC8ACFA00DE8EF5 /* Build configuration list for PBXNativeTarget "OrangeStatusTests" */;
+			buildPhases = (
+				378E462B1CC8ACFA00DE8EF5 /* Sources */,
+				378E462C1CC8ACFA00DE8EF5 /* Frameworks */,
+				378E462D1CC8ACFA00DE8EF5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				378E46311CC8ACFA00DE8EF5 /* PBXTargetDependency */,
+			);
+			name = OrangeStatusTests;
+			productName = OrangeStatusTests;
+			productReference = 378E462F1CC8ACFA00DE8EF5 /* OrangeStatusTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		378E46391CC8ACFA00DE8EF5 /* OrangeStatusUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 378E46491CC8ACFA00DE8EF5 /* Build configuration list for PBXNativeTarget "OrangeStatusUITests" */;
+			buildPhases = (
+				378E46361CC8ACFA00DE8EF5 /* Sources */,
+				378E46371CC8ACFA00DE8EF5 /* Frameworks */,
+				378E46381CC8ACFA00DE8EF5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				378E463C1CC8ACFA00DE8EF5 /* PBXTargetDependency */,
+			);
+			name = OrangeStatusUITests;
+			productName = OrangeStatusUITests;
+			productReference = 378E463A1CC8ACFA00DE8EF5 /* OrangeStatusUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		378E460E1CC8ACFA00DE8EF5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = ZhangCheng;
+				TargetAttributes = {
+					378E46151CC8ACFA00DE8EF5 = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+					378E462E1CC8ACFA00DE8EF5 = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = 378E46151CC8ACFA00DE8EF5;
+					};
+					378E46391CC8ACFA00DE8EF5 = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = 378E46151CC8ACFA00DE8EF5;
+					};
+				};
+			};
+			buildConfigurationList = 378E46111CC8ACFA00DE8EF5 /* Build configuration list for PBXProject "OrangeStatus" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 378E460D1CC8ACFA00DE8EF5;
+			productRefGroup = 378E46171CC8ACFA00DE8EF5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				378E46151CC8ACFA00DE8EF5 /* OrangeStatus */,
+				378E462E1CC8ACFA00DE8EF5 /* OrangeStatusTests */,
+				378E46391CC8ACFA00DE8EF5 /* OrangeStatusUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		378E46141CC8ACFA00DE8EF5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				378E46291CC8ACFA00DE8EF5 /* LaunchScreen.storyboard in Resources */,
+				378E46261CC8ACFA00DE8EF5 /* Assets.xcassets in Resources */,
+				378E46241CC8ACFA00DE8EF5 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		378E462D1CC8ACFA00DE8EF5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		378E46381CC8ACFA00DE8EF5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		378E46121CC8ACFA00DE8EF5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				378E46211CC8ACFA00DE8EF5 /* ViewController.m in Sources */,
+				378E461E1CC8ACFA00DE8EF5 /* AppDelegate.m in Sources */,
+				378E461B1CC8ACFA00DE8EF5 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		378E462B1CC8ACFA00DE8EF5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				378E46341CC8ACFA00DE8EF5 /* OrangeStatusTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		378E46361CC8ACFA00DE8EF5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				378E463F1CC8ACFA00DE8EF5 /* OrangeStatusUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		378E46311CC8ACFA00DE8EF5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 378E46151CC8ACFA00DE8EF5 /* OrangeStatus */;
+			targetProxy = 378E46301CC8ACFA00DE8EF5 /* PBXContainerItemProxy */;
+		};
+		378E463C1CC8ACFA00DE8EF5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 378E46151CC8ACFA00DE8EF5 /* OrangeStatus */;
+			targetProxy = 378E463B1CC8ACFA00DE8EF5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		378E46221CC8ACFA00DE8EF5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				378E46231CC8ACFA00DE8EF5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		378E46271CC8ACFA00DE8EF5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				378E46281CC8ACFA00DE8EF5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		378E46411CC8ACFA00DE8EF5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		378E46421CC8ACFA00DE8EF5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		378E46441CC8ACFA00DE8EF5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = OrangeStatus/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ZhangChengStatus.OrangeStatus;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		378E46451CC8ACFA00DE8EF5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = OrangeStatus/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ZhangChengStatus.OrangeStatus;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		378E46471CC8ACFA00DE8EF5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = OrangeStatusTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ZhangChengStatus.OrangeStatusTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OrangeStatus.app/OrangeStatus";
+			};
+			name = Debug;
+		};
+		378E46481CC8ACFA00DE8EF5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = OrangeStatusTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ZhangChengStatus.OrangeStatusTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OrangeStatus.app/OrangeStatus";
+			};
+			name = Release;
+		};
+		378E464A1CC8ACFA00DE8EF5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = OrangeStatusUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ZhangChengStatus.OrangeStatusUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = OrangeStatus;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		378E464B1CC8ACFA00DE8EF5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = OrangeStatusUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ZhangChengStatus.OrangeStatusUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = OrangeStatus;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		378E46111CC8ACFA00DE8EF5 /* Build configuration list for PBXProject "OrangeStatus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				378E46411CC8ACFA00DE8EF5 /* Debug */,
+				378E46421CC8ACFA00DE8EF5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		378E46431CC8ACFA00DE8EF5 /* Build configuration list for PBXNativeTarget "OrangeStatus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				378E46441CC8ACFA00DE8EF5 /* Debug */,
+				378E46451CC8ACFA00DE8EF5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		378E46461CC8ACFA00DE8EF5 /* Build configuration list for PBXNativeTarget "OrangeStatusTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				378E46471CC8ACFA00DE8EF5 /* Debug */,
+				378E46481CC8ACFA00DE8EF5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		378E46491CC8ACFA00DE8EF5 /* Build configuration list for PBXNativeTarget "OrangeStatusUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				378E464A1CC8ACFA00DE8EF5 /* Debug */,
+				378E464B1CC8ACFA00DE8EF5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 378E460E1CC8ACFA00DE8EF5 /* Project object */;
+}
