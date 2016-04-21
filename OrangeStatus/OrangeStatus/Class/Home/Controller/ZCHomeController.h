@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  ZCHomeController.h
 //  OrangeStatus
 //
 //  Created by ZhangCheng on 16/4/21.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface ZCHomeController : UITableViewController
 
 @end
-

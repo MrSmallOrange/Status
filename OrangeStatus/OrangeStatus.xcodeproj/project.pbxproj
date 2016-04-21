@@ -8,13 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		378E461B1CC8ACFA00DE8EF5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 378E461A1CC8ACFA00DE8EF5 /* main.m */; };
-		378E461E1CC8ACFA00DE8EF5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 378E461D1CC8ACFA00DE8EF5 /* AppDelegate.m */; };
-		378E46211CC8ACFA00DE8EF5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 378E46201CC8ACFA00DE8EF5 /* ViewController.m */; };
-		378E46241CC8ACFA00DE8EF5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 378E46221CC8ACFA00DE8EF5 /* Main.storyboard */; };
 		378E46261CC8ACFA00DE8EF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 378E46251CC8ACFA00DE8EF5 /* Assets.xcassets */; };
 		378E46291CC8ACFA00DE8EF5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 378E46271CC8ACFA00DE8EF5 /* LaunchScreen.storyboard */; };
 		378E46341CC8ACFA00DE8EF5 /* OrangeStatusTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 378E46331CC8ACFA00DE8EF5 /* OrangeStatusTests.m */; };
 		378E463F1CC8ACFA00DE8EF5 /* OrangeStatusUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 378E463E1CC8ACFA00DE8EF5 /* OrangeStatusUITests.m */; };
+		378E46641CC8B93E00DE8EF5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 378E465A1CC8B93E00DE8EF5 /* AppDelegate.m */; };
+		378E46671CC8B9BF00DE8EF5 /* ZCDiscoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = 378E46661CC8B9BF00DE8EF5 /* ZCDiscoverController.m */; };
+		378E466A1CC8B9D000DE8EF5 /* ZCHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 378E46691CC8B9D000DE8EF5 /* ZCHomeController.m */; };
+		378E466D1CC8B9EC00DE8EF5 /* ZCNavigaionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 378E466C1CC8B9EC00DE8EF5 /* ZCNavigaionController.m */; };
+		378E46701CC8B9FF00DE8EF5 /* ZCTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 378E466F1CC8B9FF00DE8EF5 /* ZCTabBarController.m */; };
+		378E46731CC8BA1700DE8EF5 /* ZCMessageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 378E46721CC8BA1700DE8EF5 /* ZCMessageController.m */; };
+		378E46761CC8BA2A00DE8EF5 /* ZCProfileController.m in Sources */ = {isa = PBXBuildFile; fileRef = 378E46751CC8BA2A00DE8EF5 /* ZCProfileController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,11 +41,6 @@
 /* Begin PBXFileReference section */
 		378E46161CC8ACFA00DE8EF5 /* OrangeStatus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OrangeStatus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		378E461A1CC8ACFA00DE8EF5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		378E461C1CC8ACFA00DE8EF5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		378E461D1CC8ACFA00DE8EF5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		378E461F1CC8ACFA00DE8EF5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		378E46201CC8ACFA00DE8EF5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		378E46231CC8ACFA00DE8EF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		378E46251CC8ACFA00DE8EF5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		378E46281CC8ACFA00DE8EF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		378E462A1CC8ACFA00DE8EF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -51,6 +50,20 @@
 		378E463A1CC8ACFA00DE8EF5 /* OrangeStatusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OrangeStatusUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		378E463E1CC8ACFA00DE8EF5 /* OrangeStatusUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OrangeStatusUITests.m; sourceTree = "<group>"; };
 		378E46401CC8ACFA00DE8EF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		378E46591CC8B93E00DE8EF5 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		378E465A1CC8B93E00DE8EF5 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		378E46651CC8B9BF00DE8EF5 /* ZCDiscoverController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCDiscoverController.h; sourceTree = "<group>"; };
+		378E46661CC8B9BF00DE8EF5 /* ZCDiscoverController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCDiscoverController.m; sourceTree = "<group>"; };
+		378E46681CC8B9D000DE8EF5 /* ZCHomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCHomeController.h; sourceTree = "<group>"; };
+		378E46691CC8B9D000DE8EF5 /* ZCHomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCHomeController.m; sourceTree = "<group>"; };
+		378E466B1CC8B9EC00DE8EF5 /* ZCNavigaionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCNavigaionController.h; sourceTree = "<group>"; };
+		378E466C1CC8B9EC00DE8EF5 /* ZCNavigaionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCNavigaionController.m; sourceTree = "<group>"; };
+		378E466E1CC8B9FF00DE8EF5 /* ZCTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCTabBarController.h; sourceTree = "<group>"; };
+		378E466F1CC8B9FF00DE8EF5 /* ZCTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCTabBarController.m; sourceTree = "<group>"; };
+		378E46711CC8BA1700DE8EF5 /* ZCMessageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCMessageController.h; sourceTree = "<group>"; };
+		378E46721CC8BA1700DE8EF5 /* ZCMessageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCMessageController.m; sourceTree = "<group>"; };
+		378E46741CC8BA2A00DE8EF5 /* ZCProfileController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCProfileController.h; sourceTree = "<group>"; };
+		378E46751CC8BA2A00DE8EF5 /* ZCProfileController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCProfileController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,14 +114,7 @@
 		378E46181CC8ACFA00DE8EF5 /* OrangeStatus */ = {
 			isa = PBXGroup;
 			children = (
-				378E461C1CC8ACFA00DE8EF5 /* AppDelegate.h */,
-				378E461D1CC8ACFA00DE8EF5 /* AppDelegate.m */,
-				378E461F1CC8ACFA00DE8EF5 /* ViewController.h */,
-				378E46201CC8ACFA00DE8EF5 /* ViewController.m */,
-				378E46221CC8ACFA00DE8EF5 /* Main.storyboard */,
-				378E46251CC8ACFA00DE8EF5 /* Assets.xcassets */,
-				378E46271CC8ACFA00DE8EF5 /* LaunchScreen.storyboard */,
-				378E462A1CC8ACFA00DE8EF5 /* Info.plist */,
+				378E464C1CC8B93E00DE8EF5 /* Class */,
 				378E46191CC8ACFA00DE8EF5 /* Supporting Files */,
 			);
 			path = OrangeStatus;
@@ -117,6 +123,9 @@
 		378E46191CC8ACFA00DE8EF5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				378E46251CC8ACFA00DE8EF5 /* Assets.xcassets */,
+				378E46271CC8ACFA00DE8EF5 /* LaunchScreen.storyboard */,
+				378E462A1CC8ACFA00DE8EF5 /* Info.plist */,
 				378E461A1CC8ACFA00DE8EF5 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -138,6 +147,195 @@
 				378E46401CC8ACFA00DE8EF5 /* Info.plist */,
 			);
 			path = OrangeStatusUITests;
+			sourceTree = "<group>";
+		};
+		378E464C1CC8B93E00DE8EF5 /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				378E464D1CC8B93E00DE8EF5 /* Discover */,
+				378E46511CC8B93E00DE8EF5 /* Home */,
+				378E46551CC8B93E00DE8EF5 /* Main */,
+				378E465C1CC8B93E00DE8EF5 /* Message */,
+				378E46601CC8B93E00DE8EF5 /* Profile */,
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
+		378E464D1CC8B93E00DE8EF5 /* Discover */ = {
+			isa = PBXGroup;
+			children = (
+				378E464E1CC8B93E00DE8EF5 /* Controller */,
+				378E464F1CC8B93E00DE8EF5 /* Model */,
+				378E46501CC8B93E00DE8EF5 /* View */,
+			);
+			path = Discover;
+			sourceTree = "<group>";
+		};
+		378E464E1CC8B93E00DE8EF5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				378E46651CC8B9BF00DE8EF5 /* ZCDiscoverController.h */,
+				378E46661CC8B9BF00DE8EF5 /* ZCDiscoverController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		378E464F1CC8B93E00DE8EF5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		378E46501CC8B93E00DE8EF5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		378E46511CC8B93E00DE8EF5 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				378E46521CC8B93E00DE8EF5 /* Controller */,
+				378E46531CC8B93E00DE8EF5 /* Model */,
+				378E46541CC8B93E00DE8EF5 /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		378E46521CC8B93E00DE8EF5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				378E46681CC8B9D000DE8EF5 /* ZCHomeController.h */,
+				378E46691CC8B9D000DE8EF5 /* ZCHomeController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		378E46531CC8B93E00DE8EF5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		378E46541CC8B93E00DE8EF5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		378E46551CC8B93E00DE8EF5 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				378E46561CC8B93E00DE8EF5 /* Controller */,
+				378E46571CC8B93E00DE8EF5 /* Model */,
+				378E46581CC8B93E00DE8EF5 /* Other */,
+				378E465B1CC8B93E00DE8EF5 /* View */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		378E46561CC8B93E00DE8EF5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				378E466B1CC8B9EC00DE8EF5 /* ZCNavigaionController.h */,
+				378E466C1CC8B9EC00DE8EF5 /* ZCNavigaionController.m */,
+				378E466E1CC8B9FF00DE8EF5 /* ZCTabBarController.h */,
+				378E466F1CC8B9FF00DE8EF5 /* ZCTabBarController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		378E46571CC8B93E00DE8EF5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		378E46581CC8B93E00DE8EF5 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				378E46591CC8B93E00DE8EF5 /* AppDelegate.h */,
+				378E465A1CC8B93E00DE8EF5 /* AppDelegate.m */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		378E465B1CC8B93E00DE8EF5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		378E465C1CC8B93E00DE8EF5 /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				378E465D1CC8B93E00DE8EF5 /* Controller */,
+				378E465E1CC8B93E00DE8EF5 /* Model */,
+				378E465F1CC8B93E00DE8EF5 /* View */,
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
+		378E465D1CC8B93E00DE8EF5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				378E46711CC8BA1700DE8EF5 /* ZCMessageController.h */,
+				378E46721CC8BA1700DE8EF5 /* ZCMessageController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		378E465E1CC8B93E00DE8EF5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		378E465F1CC8B93E00DE8EF5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		378E46601CC8B93E00DE8EF5 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				378E46611CC8B93E00DE8EF5 /* Controller */,
+				378E46621CC8B93E00DE8EF5 /* Model */,
+				378E46631CC8B93E00DE8EF5 /* View */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		378E46611CC8B93E00DE8EF5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				378E46741CC8BA2A00DE8EF5 /* ZCProfileController.h */,
+				378E46751CC8BA2A00DE8EF5 /* ZCProfileController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		378E46621CC8B93E00DE8EF5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		378E46631CC8B93E00DE8EF5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,6 +400,7 @@
 		378E460E1CC8ACFA00DE8EF5 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = ZC;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = ZhangCheng;
 				TargetAttributes = {
@@ -245,7 +444,6 @@
 			files = (
 				378E46291CC8ACFA00DE8EF5 /* LaunchScreen.storyboard in Resources */,
 				378E46261CC8ACFA00DE8EF5 /* Assets.xcassets in Resources */,
-				378E46241CC8ACFA00DE8EF5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,9 +468,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				378E46211CC8ACFA00DE8EF5 /* ViewController.m in Sources */,
-				378E461E1CC8ACFA00DE8EF5 /* AppDelegate.m in Sources */,
+				378E466D1CC8B9EC00DE8EF5 /* ZCNavigaionController.m in Sources */,
+				378E46641CC8B93E00DE8EF5 /* AppDelegate.m in Sources */,
+				378E46761CC8BA2A00DE8EF5 /* ZCProfileController.m in Sources */,
 				378E461B1CC8ACFA00DE8EF5 /* main.m in Sources */,
+				378E46671CC8B9BF00DE8EF5 /* ZCDiscoverController.m in Sources */,
+				378E46701CC8B9FF00DE8EF5 /* ZCTabBarController.m in Sources */,
+				378E46731CC8BA1700DE8EF5 /* ZCMessageController.m in Sources */,
+				378E466A1CC8B9D000DE8EF5 /* ZCHomeController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,14 +511,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		378E46221CC8ACFA00DE8EF5 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				378E46231CC8ACFA00DE8EF5 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		378E46271CC8ACFA00DE8EF5 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -414,6 +609,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = OrangeStatus/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ZhangChengStatus.OrangeStatus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -425,6 +621,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = OrangeStatus/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ZhangChengStatus.OrangeStatus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
