@@ -13,6 +13,8 @@
 #import "ZCDiscoverController.h"
 #import "ZCProfileController.h"
 #import "ZCNavigaionController.h"
+#import "UIImage+Extension.h"
+#import "ZCTabBar.h"
 
 @interface ZCTabBarController ()
 
@@ -20,31 +22,60 @@
 
 @implementation ZCTabBarController
 
++ (void)initialize
+{
+    //获取所有的UITabBarItem的外观属性
+//    UITabBarItem *item = [UITabBarItem appearance];
+    //获取当前类的所有UITabBarItem的外观属性
+    UITabBarItem *item = [UITabBarItem appearanceWhenContainedIn:self, nil];
+    
+    NSMutableDictionary *textAttribute = [NSMutableDictionary dictionary];
+    textAttribute[NSForegroundColorAttributeName] = [UIColor orangeColor];
+    [item setTitleTextAttributes:textAttribute forState:UIControlStateNormal];
+    
+    NSMutableDictionary *selectedTextAttribute = [NSMutableDictionary dictionary];
+    selectedTextAttribute[NSForegroundColorAttributeName] = [UIColor orangeColor];
+    [item setTitleTextAttributes:selectedTextAttribute forState:UIControlStateSelected];
+    
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self setAllChildViewController];
+    
+    ZCTabBar *tabBar = [[ZCTabBar alloc] init];
+    [self setValue:tabBar forKeyPath:@"tabBar"];
+
+}
+
+- (void)setAllChildViewController
+{
+    
     ZCHomeController *home = [[ZCHomeController alloc] init];
+    home.view.backgroundColor = [UIColor grayColor];
     UIImage *homeImage = [UIImage imageNamed:@"tabbar_home"];
-    UIImage *homeSelectedImage = [[UIImage imageNamed:@"tabbar_home_selected"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    UIImage *homeSelectedImage = [UIImage imageWithOriginaName:@"tabbar_home_selected"];
     [self addOneChildViewController:home title:@"首页" image:homeImage selectedImage:homeSelectedImage];
     
     ZCMessageController *message = [[ZCMessageController alloc] init];
+    message.view.backgroundColor = [UIColor grayColor];
     UIImage *messageImage = [UIImage imageNamed:@"tabbar_message_center"];
-    UIImage *selectedMessageImage = [[UIImage imageNamed:@"tabbar_message_center_selected"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    UIImage *selectedMessageImage = [UIImage imageWithOriginaName:@"tabbar_message_center_selected"];
     [self addOneChildViewController:message title:@"消息" image:messageImage selectedImage:selectedMessageImage];
     
+    
     ZCDiscoverController *discover = [[ZCDiscoverController alloc] init];
+    discover.view.backgroundColor = [UIColor grayColor];
     UIImage *discoverImage = [UIImage imageNamed:@"tabbar_discover"];
-    UIImage *selectedDiscoverImage = [[UIImage imageNamed:@"tabbar_discover_selected"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    UIImage *selectedDiscoverImage = [UIImage imageWithOriginaName:@"tabbar_discover_selected"];
     [self addOneChildViewController:discover title:@"发现" image:discoverImage selectedImage:selectedDiscoverImage];
     
     ZCProfileController *profile = [[ZCProfileController alloc] init];
+    profile.view.backgroundColor = [UIColor grayColor];
     UIImage *profileImage = [UIImage imageNamed:@"tabbar_profile"];
-    UIImage *selectedProfielImage = [[UIImage imageNamed:@"tabbar_profile_selected"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    UIImage *selectedProfielImage = [UIImage imageWithOriginaName:@"tabbar_profile_selected"];
     [self addOneChildViewController:profile title:@"我" image:profileImage selectedImage:selectedProfielImage];
-    
-    
-    
 }
 
 - (void)addOneChildViewController:(UIViewController *)childViewController title:(NSString *)title image:(UIImage *)image selectedImage:(UIImage *)selectedImage
@@ -53,13 +84,7 @@
     childViewController.tabBarItem.image = image;
     childViewController.tabBarItem.selectedImage = selectedImage;
     
-    NSMutableDictionary *textAttribute = [NSMutableDictionary dictionary];
-    textAttribute[NSForegroundColorAttributeName] = ZCColor(123, 123, 123);
-    [childViewController.tabBarItem setTitleTextAttributes:textAttribute forState:UIControlStateNormal];
-    
-    NSMutableDictionary *selectedTextAttribute = [NSMutableDictionary dictionary];
-    selectedTextAttribute[NSForegroundColorAttributeName] = [UIColor orangeColor];
-    [childViewController.tabBarItem setTitleTextAttributes:selectedTextAttribute forState:UIControlStateSelected];
+
     
     ZCNavigaionController *naviVC = [[ZCNavigaionController alloc] initWithRootViewController:childViewController];
     

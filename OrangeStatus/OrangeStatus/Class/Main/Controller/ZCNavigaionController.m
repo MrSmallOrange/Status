@@ -7,6 +7,7 @@
 //
 
 #import "ZCNavigaionController.h"
+#import "UIBarButtonItem+Extension.h"
 
 @interface ZCNavigaionController ()
 
@@ -19,19 +20,33 @@
     // Do any additional setup after loading the view.
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
++ (void)initialize
+{
+    UIBarButtonItem *item = [UIBarButtonItem appearanceWhenContainedIn:self, nil];
+    NSMutableDictionary *textAttribute = [NSMutableDictionary dictionary];
+    textAttribute[NSForegroundColorAttributeName] = [UIColor orangeColor];
+    [item setTitleTextAttributes:textAttribute forState:UIControlStateNormal];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated
+{
+    if (self.viewControllers.count > 0) {
+        viewController.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithImage:[UIImage imageNamed:@"navigationbar_back"] highlightedImage:[UIImage imageNamed:@"navigationbar_back_highlighted"] target:self action:@selector(back)];
+        viewController.navigationItem.rightBarButtonItem = [UIBarButtonItem itemWithImage:[UIImage imageNamed:@"navigationbar_more"] highlightedImage:[UIImage imageNamed:@"navigationbar_back_highlighted"] target:self action:@selector(more)];
+    }
+    
+    [super pushViewController:viewController animated:YES];
 }
-*/
 
+#pragma  mark - BarButtonItem Target
+- (void)back
+{
+    [self popViewControllerAnimated:YES];
+}
+
+- (void)more
+{
+
+}
 @end
