@@ -11,12 +11,15 @@
 		37136B921CC8FEDD0052A2EA /* ZCTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 37136B911CC8FEDD0052A2EA /* ZCTabBar.m */; };
 		37136B951CC9016C0052A2EA /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 37136B941CC9016C0052A2EA /* UIBarButtonItem+Extension.m */; };
 		37136B981CC90B0C0052A2EA /* ZCTitleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 37136B971CC90B0C0052A2EA /* ZCTitleButton.m */; };
-		37136B9E1CC912670052A2EA /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 37136B9D1CC912670052A2EA /* UIView+Extension.m */; };
+		37308E5A1CC9EC910086B7DD /* ZCSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 37308E591CC9EC910086B7DD /* ZCSearchBar.m */; };
+		37308E5D1CC9F2E30086B7DD /* ZCDropDownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 37308E5C1CC9F2E30086B7DD /* ZCDropDownMenu.m */; };
+		37308E671CCA144D0086B7DD /* ZCNewfeatureController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37308E661CCA144D0086B7DD /* ZCNewfeatureController.m */; };
+		37308E691CCA14780086B7DD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 37308E681CCA14780086B7DD /* AppDelegate.m */; };
+		37308E6C1CCA63300086B7DD /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 37308E6B1CCA63300086B7DD /* UIView+Extension.m */; };
 		378E461B1CC8ACFA00DE8EF5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 378E461A1CC8ACFA00DE8EF5 /* main.m */; };
 		378E46261CC8ACFA00DE8EF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 378E46251CC8ACFA00DE8EF5 /* Assets.xcassets */; };
 		378E46341CC8ACFA00DE8EF5 /* OrangeStatusTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 378E46331CC8ACFA00DE8EF5 /* OrangeStatusTests.m */; };
 		378E463F1CC8ACFA00DE8EF5 /* OrangeStatusUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 378E463E1CC8ACFA00DE8EF5 /* OrangeStatusUITests.m */; };
-		378E46641CC8B93E00DE8EF5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 378E465A1CC8B93E00DE8EF5 /* AppDelegate.m */; };
 		378E46671CC8B9BF00DE8EF5 /* ZCDiscoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = 378E46661CC8B9BF00DE8EF5 /* ZCDiscoverController.m */; };
 		378E466A1CC8B9D000DE8EF5 /* ZCHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 378E46691CC8B9D000DE8EF5 /* ZCHomeController.m */; };
 		378E466D1CC8B9EC00DE8EF5 /* ZCNavigaionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 378E466C1CC8B9EC00DE8EF5 /* ZCNavigaionController.m */; };
@@ -51,9 +54,16 @@
 		37136B941CC9016C0052A2EA /* UIBarButtonItem+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Extension.m"; sourceTree = "<group>"; };
 		37136B961CC90B0C0052A2EA /* ZCTitleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCTitleButton.h; sourceTree = "<group>"; };
 		37136B971CC90B0C0052A2EA /* ZCTitleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCTitleButton.m; sourceTree = "<group>"; };
-		37136B9C1CC912670052A2EA /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
-		37136B9D1CC912670052A2EA /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		37136B9F1CC912970052A2EA /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		37308E581CC9EC910086B7DD /* ZCSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCSearchBar.h; sourceTree = "<group>"; };
+		37308E591CC9EC910086B7DD /* ZCSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCSearchBar.m; sourceTree = "<group>"; };
+		37308E5B1CC9F2E30086B7DD /* ZCDropDownMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCDropDownMenu.h; sourceTree = "<group>"; };
+		37308E5C1CC9F2E30086B7DD /* ZCDropDownMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCDropDownMenu.m; sourceTree = "<group>"; };
+		37308E651CCA144D0086B7DD /* ZCNewfeatureController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCNewfeatureController.h; sourceTree = "<group>"; };
+		37308E661CCA144D0086B7DD /* ZCNewfeatureController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCNewfeatureController.m; sourceTree = "<group>"; };
+		37308E681CCA14780086B7DD /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		37308E6A1CCA63300086B7DD /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		37308E6B1CCA63300086B7DD /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		378E46161CC8ACFA00DE8EF5 /* OrangeStatus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OrangeStatus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		378E461A1CC8ACFA00DE8EF5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		378E46251CC8ACFA00DE8EF5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -65,7 +75,6 @@
 		378E463E1CC8ACFA00DE8EF5 /* OrangeStatusUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OrangeStatusUITests.m; sourceTree = "<group>"; };
 		378E46401CC8ACFA00DE8EF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		378E46591CC8B93E00DE8EF5 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		378E465A1CC8B93E00DE8EF5 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		378E46651CC8B9BF00DE8EF5 /* ZCDiscoverController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCDiscoverController.h; sourceTree = "<group>"; };
 		378E46661CC8B9BF00DE8EF5 /* ZCDiscoverController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCDiscoverController.m; sourceTree = "<group>"; };
 		378E46681CC8B9D000DE8EF5 /* ZCHomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCHomeController.h; sourceTree = "<group>"; };
@@ -108,8 +117,8 @@
 		37136B881CC8E83C0052A2EA /* Category */ = {
 			isa = PBXGroup;
 			children = (
-				37136B9C1CC912670052A2EA /* UIView+Extension.h */,
-				37136B9D1CC912670052A2EA /* UIView+Extension.m */,
+				37308E6A1CCA63300086B7DD /* UIView+Extension.h */,
+				37308E6B1CCA63300086B7DD /* UIView+Extension.m */,
 				37136B891CC8E8670052A2EA /* UIImage+Extension.h */,
 				37136B8A1CC8E8670052A2EA /* UIImage+Extension.m */,
 				37136B931CC9016C0052A2EA /* UIBarButtonItem+Extension.h */,
@@ -123,6 +132,43 @@
 			children = (
 				37136B901CC8FEDD0052A2EA /* ZCTabBar.h */,
 				37136B911CC8FEDD0052A2EA /* ZCTabBar.m */,
+				37308E581CC9EC910086B7DD /* ZCSearchBar.h */,
+				37308E591CC9EC910086B7DD /* ZCSearchBar.m */,
+				37308E5B1CC9F2E30086B7DD /* ZCDropDownMenu.h */,
+				37308E5C1CC9F2E30086B7DD /* ZCDropDownMenu.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		37308E5E1CCA13DA0086B7DD /* Newfeature */ = {
+			isa = PBXGroup;
+			children = (
+				37308E5F1CCA13DA0086B7DD /* Controller */,
+				37308E601CCA13DA0086B7DD /* Model */,
+				37308E611CCA13DA0086B7DD /* View */,
+			);
+			path = Newfeature;
+			sourceTree = "<group>";
+		};
+		37308E5F1CCA13DA0086B7DD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				37308E651CCA144D0086B7DD /* ZCNewfeatureController.h */,
+				37308E661CCA144D0086B7DD /* ZCNewfeatureController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		37308E601CCA13DA0086B7DD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		37308E611CCA13DA0086B7DD /* View */ = {
+			isa = PBXGroup;
+			children = (
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -188,6 +234,7 @@
 		378E464C1CC8B93E00DE8EF5 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				37308E5E1CCA13DA0086B7DD /* Newfeature */,
 				378E464D1CC8B93E00DE8EF5 /* Discover */,
 				378E46511CC8B93E00DE8EF5 /* Home */,
 				378E46551CC8B93E00DE8EF5 /* Main */,
@@ -299,7 +346,7 @@
 			isa = PBXGroup;
 			children = (
 				378E46591CC8B93E00DE8EF5 /* AppDelegate.h */,
-				378E465A1CC8B93E00DE8EF5 /* AppDelegate.m */,
+				37308E681CCA14780086B7DD /* AppDelegate.m */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -499,10 +546,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37308E671CCA144D0086B7DD /* ZCNewfeatureController.m in Sources */,
 				378E466D1CC8B9EC00DE8EF5 /* ZCNavigaionController.m in Sources */,
 				37136B981CC90B0C0052A2EA /* ZCTitleButton.m in Sources */,
-				37136B9E1CC912670052A2EA /* UIView+Extension.m in Sources */,
-				378E46641CC8B93E00DE8EF5 /* AppDelegate.m in Sources */,
+				37308E5D1CC9F2E30086B7DD /* ZCDropDownMenu.m in Sources */,
+				37308E691CCA14780086B7DD /* AppDelegate.m in Sources */,
+				37308E5A1CC9EC910086B7DD /* ZCSearchBar.m in Sources */,
 				378E46761CC8BA2A00DE8EF5 /* ZCProfileController.m in Sources */,
 				378E461B1CC8ACFA00DE8EF5 /* main.m in Sources */,
 				378E46671CC8B9BF00DE8EF5 /* ZCDiscoverController.m in Sources */,
@@ -511,6 +560,7 @@
 				37136B8B1CC8E8670052A2EA /* UIImage+Extension.m in Sources */,
 				378E46731CC8BA1700DE8EF5 /* ZCMessageController.m in Sources */,
 				37136B921CC8FEDD0052A2EA /* ZCTabBar.m in Sources */,
+				37308E6C1CCA63300086B7DD /* UIView+Extension.m in Sources */,
 				378E466A1CC8B9D000DE8EF5 /* ZCHomeController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

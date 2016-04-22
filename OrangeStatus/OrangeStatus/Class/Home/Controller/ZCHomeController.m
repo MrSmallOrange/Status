@@ -9,8 +9,10 @@
 #import "ZCHomeController.h"
 #import "UIBarButtonItem+Extension.h"
 #import "ZCTitleButton.h"
+#import "ZCDropDownMenu.h"
 
-@interface ZCHomeController ()
+
+@interface ZCHomeController () <ZCDropDownMenuDelegate>
 
 @end
 
@@ -25,9 +27,20 @@
     
     
     ZCTitleButton *titleButton = [[ZCTitleButton alloc] init];
+    [titleButton setTitle:@"首页" forState:UIControlStateNormal];
+    [titleButton addTarget:self action:@selector(clickTitle:) forControlEvents:UIControlEventTouchUpInside];
     self.navigationItem.titleView = titleButton;
 
     
+}
+#pragma mark - Title Button Target 
+- (void)clickTitle:(UIButton *)titleButton
+{
+    ZCDropDownMenu *menu = [ZCDropDownMenu menu];
+    menu.delegate = self;
+    menu.contentView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, 100, 100) style:UITableViewStyleGrouped];
+    
+    [menu showFromView:titleButton];
 }
 
 #pragma mark - BarButtonItem Target 
@@ -41,6 +54,18 @@
     
 }
 
+#pragma mark - ZCDropDownMenuDelegate
+- (void)dropDownMenuDidDismiss:(ZCDropDownMenu *)menu
+{
+    UIButton *titleButton = (UIButton *)self.navigationItem.titleView;
+    titleButton.selected = NO;
+}
+
+- (void)dropDownMenuDidShow:(ZCDropDownMenu *)menu
+{
+    UIButton *titleButton = (UIButton *)self.navigationItem.titleView;
+    titleButton.selected = YES;
+}
 
 #pragma mark - Table view data source
 

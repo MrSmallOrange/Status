@@ -33,7 +33,7 @@
 {
     if (self.viewControllers.count > 0) {
         viewController.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithImage:[UIImage imageNamed:@"navigationbar_back"] highlightedImage:[UIImage imageNamed:@"navigationbar_back_highlighted"] target:self action:@selector(back)];
-        viewController.navigationItem.rightBarButtonItem = [UIBarButtonItem itemWithImage:[UIImage imageNamed:@"navigationbar_more"] highlightedImage:[UIImage imageNamed:@"navigationbar_back_highlighted"] target:self action:@selector(more)];
+        viewController.navigationItem.rightBarButtonItem = [UIBarButtonItem itemWithImage:[UIImage imageNamed:@"navigationbar_more"] highlightedImage:[UIImage imageNamed:@"navigationbar_more_highlighted"] target:self action:@selector(more)];
     }
     
     [super pushViewController:viewController animated:YES];

@@ -16,7 +16,7 @@
 #import "UIImage+Extension.h"
 #import "ZCTabBar.h"
 
-@interface ZCTabBarController ()
+@interface ZCTabBarController () <ZCTabBarDelegate>
 
 @end
 
@@ -44,8 +44,7 @@
     
     [self setAllChildViewController];
     
-    ZCTabBar *tabBar = [[ZCTabBar alloc] init];
-    [self setValue:tabBar forKeyPath:@"tabBar"];
+
 
 }
 
@@ -76,6 +75,11 @@
     UIImage *profileImage = [UIImage imageNamed:@"tabbar_profile"];
     UIImage *selectedProfielImage = [UIImage imageWithOriginaName:@"tabbar_profile_selected"];
     [self addOneChildViewController:profile title:@"我" image:profileImage selectedImage:selectedProfielImage];
+    
+    
+    ZCTabBar *tabBar = [[ZCTabBar alloc] init];
+    tabBar.delegate = self;
+    [self setValue:tabBar forKeyPath:@"tabBar"];
 }
 
 - (void)addOneChildViewController:(UIViewController *)childViewController title:(NSString *)title image:(UIImage *)image selectedImage:(UIImage *)selectedImage
@@ -92,6 +96,14 @@
 
 
 
+}
+
+#pragma  mark - ZCTabBarDelegate
+- (void)tabBarDidClickPlusButton:(ZCTabBar *)tabBar
+{
+    UIViewController *vc = [[UIViewController alloc] init];
+    vc.view.backgroundColor = [UIColor redColor];
+    [self presentViewController:vc animated:YES completion:nil];
 }
 
 
