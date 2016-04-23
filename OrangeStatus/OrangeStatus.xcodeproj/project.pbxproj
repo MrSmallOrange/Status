@@ -26,6 +26,10 @@
 		378E46701CC8B9FF00DE8EF5 /* ZCTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 378E466F1CC8B9FF00DE8EF5 /* ZCTabBarController.m */; };
 		378E46731CC8BA1700DE8EF5 /* ZCMessageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 378E46721CC8BA1700DE8EF5 /* ZCMessageController.m */; };
 		378E46761CC8BA2A00DE8EF5 /* ZCProfileController.m in Sources */ = {isa = PBXBuildFile; fileRef = 378E46751CC8BA2A00DE8EF5 /* ZCProfileController.m */; };
+		37D120911CCB462C00CC2E28 /* ZCAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D120901CCB462C00CC2E28 /* ZCAccount.m */; };
+		37D120951CCB4AEF00CC2E28 /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D120941CCB4AEF00CC2E28 /* MBProgressHUD+MJ.m */; };
+		37EFB0C11CCB2A4700C17723 /* ZCOAuthController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37EFB0C01CCB2A4700C17723 /* ZCOAuthController.m */; };
+		582315994CF84AF71259385E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8249A114EE53A17EF449A56E /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +91,15 @@
 		378E46721CC8BA1700DE8EF5 /* ZCMessageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCMessageController.m; sourceTree = "<group>"; };
 		378E46741CC8BA2A00DE8EF5 /* ZCProfileController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCProfileController.h; sourceTree = "<group>"; };
 		378E46751CC8BA2A00DE8EF5 /* ZCProfileController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCProfileController.m; sourceTree = "<group>"; };
+		37D1208F1CCB462C00CC2E28 /* ZCAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCAccount.h; sourceTree = "<group>"; };
+		37D120901CCB462C00CC2E28 /* ZCAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCAccount.m; sourceTree = "<group>"; };
+		37D120931CCB4AEF00CC2E28 /* MBProgressHUD+MJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+MJ.h"; sourceTree = "<group>"; };
+		37D120941CCB4AEF00CC2E28 /* MBProgressHUD+MJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+MJ.m"; sourceTree = "<group>"; };
+		37EFB0BF1CCB2A4700C17723 /* ZCOAuthController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCOAuthController.h; sourceTree = "<group>"; };
+		37EFB0C01CCB2A4700C17723 /* ZCOAuthController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCOAuthController.m; sourceTree = "<group>"; };
+		8249A114EE53A17EF449A56E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		852B2C352667A9315195F049 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		AF1BABFCAADD62A2207024F6 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +107,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				582315994CF84AF71259385E /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,6 +194,8 @@
 				378E46321CC8ACFA00DE8EF5 /* OrangeStatusTests */,
 				378E463D1CC8ACFA00DE8EF5 /* OrangeStatusUITests */,
 				378E46171CC8ACFA00DE8EF5 /* Products */,
+				9DC1ED581FDA319FCF51C271 /* Pods */,
+				59324189E59CD667559ADA4B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -234,6 +250,7 @@
 		378E464C1CC8B93E00DE8EF5 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				37EFB0BD1CCB2A1000C17723 /* OAuth */,
 				37308E5E1CCA13DA0086B7DD /* Newfeature */,
 				378E464D1CC8B93E00DE8EF5 /* Discover */,
 				378E46511CC8B93E00DE8EF5 /* Home */,
@@ -315,6 +332,7 @@
 		378E46551CC8B93E00DE8EF5 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				37D120921CCB4ADC00CC2E28 /* Lib */,
 				37136B881CC8E83C0052A2EA /* Category */,
 				378E46561CC8B93E00DE8EF5 /* Controller */,
 				378E46571CC8B93E00DE8EF5 /* Model */,
@@ -417,6 +435,59 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		37D1208E1CCB461700CC2E28 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				37D1208F1CCB462C00CC2E28 /* ZCAccount.h */,
+				37D120901CCB462C00CC2E28 /* ZCAccount.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		37D120921CCB4ADC00CC2E28 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				37D120931CCB4AEF00CC2E28 /* MBProgressHUD+MJ.h */,
+				37D120941CCB4AEF00CC2E28 /* MBProgressHUD+MJ.m */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		37EFB0BD1CCB2A1000C17723 /* OAuth */ = {
+			isa = PBXGroup;
+			children = (
+				37D1208E1CCB461700CC2E28 /* Model */,
+				37EFB0BE1CCB2A1000C17723 /* Controller */,
+			);
+			path = OAuth;
+			sourceTree = "<group>";
+		};
+		37EFB0BE1CCB2A1000C17723 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				37EFB0BF1CCB2A4700C17723 /* ZCOAuthController.h */,
+				37EFB0C01CCB2A4700C17723 /* ZCOAuthController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		59324189E59CD667559ADA4B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8249A114EE53A17EF449A56E /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9DC1ED581FDA319FCF51C271 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AF1BABFCAADD62A2207024F6 /* Pods.debug.xcconfig */,
+				852B2C352667A9315195F049 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -424,9 +495,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 378E46431CC8ACFA00DE8EF5 /* Build configuration list for PBXNativeTarget "OrangeStatus" */;
 			buildPhases = (
+				1EAB6F6D4AFCEB877CEDE9BA /* Check Pods Manifest.lock */,
 				378E46121CC8ACFA00DE8EF5 /* Sources */,
 				378E46131CC8ACFA00DE8EF5 /* Frameworks */,
 				378E46141CC8ACFA00DE8EF5 /* Resources */,
+				98983D3DCF11E34DF5DB58A4 /* Embed Pods Frameworks */,
+				BBFCDA657926E02A20D980AC /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -541,17 +615,68 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1EAB6F6D4AFCEB877CEDE9BA /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		98983D3DCF11E34DF5DB58A4 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BBFCDA657926E02A20D980AC /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		378E46121CC8ACFA00DE8EF5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				37308E671CCA144D0086B7DD /* ZCNewfeatureController.m in Sources */,
+				37D120951CCB4AEF00CC2E28 /* MBProgressHUD+MJ.m in Sources */,
 				378E466D1CC8B9EC00DE8EF5 /* ZCNavigaionController.m in Sources */,
 				37136B981CC90B0C0052A2EA /* ZCTitleButton.m in Sources */,
 				37308E5D1CC9F2E30086B7DD /* ZCDropDownMenu.m in Sources */,
+				37D120911CCB462C00CC2E28 /* ZCAccount.m in Sources */,
 				37308E691CCA14780086B7DD /* AppDelegate.m in Sources */,
 				37308E5A1CC9EC910086B7DD /* ZCSearchBar.m in Sources */,
+				37EFB0C11CCB2A4700C17723 /* ZCOAuthController.m in Sources */,
 				378E46761CC8BA2A00DE8EF5 /* ZCProfileController.m in Sources */,
 				378E461B1CC8ACFA00DE8EF5 /* main.m in Sources */,
 				378E46671CC8B9BF00DE8EF5 /* ZCDiscoverController.m in Sources */,
@@ -681,6 +806,7 @@
 		};
 		378E46441CC8ACFA00DE8EF5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF1BABFCAADD62A2207024F6 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
@@ -691,11 +817,13 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ZhangChengStatus.OrangeStatus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/**";
 			};
 			name = Debug;
 		};
 		378E46451CC8ACFA00DE8EF5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 852B2C352667A9315195F049 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
@@ -706,6 +834,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ZhangChengStatus.OrangeStatus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/**";
 			};
 			name = Release;
 		};

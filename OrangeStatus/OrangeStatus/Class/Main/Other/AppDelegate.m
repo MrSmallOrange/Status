@@ -1,6 +1,9 @@
 //
 //  AppDelegate.m
 //  OrangeStatus
+
+//App Key：3288281858
+//App Secret：90aecde1a84a96801b16aa20ed637156
 //
 //  Created by ZhangCheng on 16/4/21.
 //  Copyright © 2016年 ZhangCheng. All rights reserved.
@@ -9,6 +12,8 @@
 #import "AppDelegate.h"
 #import "ZCTabBarController.h"
 #import "ZCNewfeatureController.h"
+#import "ZCOAuthController.h"
+#import "ZCAccount.h"
 @interface AppDelegate ()
 
 @end
@@ -18,18 +23,34 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
+    
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
-//    ZCTabBarController *tabBarVC = [[ZCTabBarController alloc] init];
-//    
-//    self.window.rootViewController  = tabBarVC;
     
     
-    NSString *currentVersion = [NSBundle mainBundle].infoDictionary[@"CFBundleVersion"];
-    [[NSUserDefaults standardUserDefaults] setObject:currentVersion forKey:@"CFBundleVersion"];
+    NSString *documentPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
+    NSString *accountPath = [documentPath stringByAppendingPathComponent:@"account.plist"];
     
+    ZCAccount *account = [NSKeyedUnarchiver unarchiveObjectWithFile:accountPath];
     
-    self.window.rootViewController = [[ZCNewfeatureController alloc] init];
+    if ( account) {
+        NSString *key = @"CFBundleVersion";
+        
+        NSString *lastVersion = [[NSUserDefaults standardUserDefaults] objectForKey:key];
+        
+        NSString *currentVersion = [NSBundle mainBundle].infoDictionary[key];
+        
+        if ([lastVersion isEqualToString:currentVersion]) {
+            self.window.rootViewController = [[ZCTabBarController alloc] init];
+        }else{
+            self.window.rootViewController = [[ZCNewfeatureController alloc] init];
+            [[NSUserDefaults standardUserDefaults] setObject:currentVersion forKey:key];
+            [[NSUserDefaults standardUserDefaults] synchronize];
+        }
+    }else{
+        self.window.rootViewController = [[ZCOAuthController alloc] init];
+    }
+    
     
     [self.window makeKeyAndVisible];
     

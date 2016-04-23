@@ -7,6 +7,7 @@
 //
 
 #import "ZCNewfeatureController.h"
+#import "ZCTabBarController.h"
 #define ZCNewfeatureCount 4
 
 @interface ZCNewfeatureController () <UIScrollViewDelegate>
@@ -93,7 +94,7 @@
     startButton.centerX = self.view.centerX;
     startButton.y = 470;
     [startButton setTitle:@"开始微博" forState:UIControlStateNormal];
-    [startButton addTarget:self action:@selector(clickStartButton:) forControlEvents:UIControlEventTouchUpInside];
+    [startButton addTarget:self action:@selector(clickStartButton) forControlEvents:UIControlEventTouchUpInside];
     [imageView addSubview:startButton];
     
     
@@ -103,9 +104,10 @@
     shareButton.selected = !shareButton.selected;
 }
 
-- (void)clickStartButton:(UIButton *)startButton
+- (void)clickStartButton
 {
-    
+    UIWindow *window = [UIApplication sharedApplication].keyWindow;
+    window.rootViewController = [[ZCTabBarController alloc] init];
 }
 
 @end
