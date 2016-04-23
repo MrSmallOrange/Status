@@ -11,10 +11,10 @@
 
 #import "ZCOAuthController.h"
 #import "AFNetworking.h"
-#import "ZCTabBarController.h"
-#import "ZCNewfeatureController.h"
+#import "UIWindow+Extension.h"
 #import "ZCAccount.h"
 #import "MBProgressHUD+MJ.h"
+#import "ZCAccountTool.h"
 
 @interface ZCOAuthController () <UIWebViewDelegate>
 
@@ -113,26 +113,13 @@
         
         [MBProgressHUD hideHUD];
         
-        NSString *documentPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
-        NSString *accountPath = [documentPath stringByAppendingPathComponent:@"account.plist"];
-        [responseObject writeToFile:accountPath atomically:YES];
         
-        [NSKeyedArchiver archiveRootObject:responseObject toFile:accountPath];
-        
-        
-        NSString *key = @"CFBundleVersion";
-        NSString *lastVersion = [[NSUserDefaults standardUserDefaults] objectForKey:key];
-        NSString *currentVersion = [NSBundle mainBundle].infoDictionary[key];
-        UIWindow *window = [UIApplication sharedApplication].keyWindow;
-        if ([lastVersion isEqualToString:currentVersion]) {
-            window.rootViewController = [[ZCTabBarController alloc] init];
-        }else{
-            window.rootViewController = [[ZCNewfeatureController alloc] init];
-            [[NSUserDefaults standardUserDefaults] setObject:currentVersion forKey:key];
-            [[NSUserDefaults standardUserDefaults] synchronize];
-        }
-
-       
+        //将账号转为模型
+        ZCAccount *account = [ZCAccount accountWithDictionary:responseObject];
+        //保存账号
+        [ZCAccountTool saveAccount:account];
+        //切换控制器
+        [UIWindow switchRootViewController];
         
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {

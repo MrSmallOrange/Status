@@ -10,10 +10,10 @@
 //
 
 #import "AppDelegate.h"
-#import "ZCTabBarController.h"
-#import "ZCNewfeatureController.h"
+#import "UIWindow+Extension.h"
 #import "ZCOAuthController.h"
 #import "ZCAccount.h"
+#import "ZCAccountTool.h"
 @interface AppDelegate ()
 
 @end
@@ -25,34 +25,21 @@
     
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    [self.window makeKeyAndVisible];
+
     
-    
-    
-    NSString *documentPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
-    NSString *accountPath = [documentPath stringByAppendingPathComponent:@"account.plist"];
-    
-    ZCAccount *account = [NSKeyedUnarchiver unarchiveObjectWithFile:accountPath];
+    ZCAccount *account = [ZCAccountTool account];
+
     
     if ( account) {
-        NSString *key = @"CFBundleVersion";
+
+        [UIWindow switchRootViewController];
         
-        NSString *lastVersion = [[NSUserDefaults standardUserDefaults] objectForKey:key];
-        
-        NSString *currentVersion = [NSBundle mainBundle].infoDictionary[key];
-        
-        if ([lastVersion isEqualToString:currentVersion]) {
-            self.window.rootViewController = [[ZCTabBarController alloc] init];
-        }else{
-            self.window.rootViewController = [[ZCNewfeatureController alloc] init];
-            [[NSUserDefaults standardUserDefaults] setObject:currentVersion forKey:key];
-            [[NSUserDefaults standardUserDefaults] synchronize];
-        }
     }else{
         self.window.rootViewController = [[ZCOAuthController alloc] init];
     }
     
     
-    [self.window makeKeyAndVisible];
     
     return YES;
 }

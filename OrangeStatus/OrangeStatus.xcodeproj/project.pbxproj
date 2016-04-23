@@ -16,6 +16,7 @@
 		37308E671CCA144D0086B7DD /* ZCNewfeatureController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37308E661CCA144D0086B7DD /* ZCNewfeatureController.m */; };
 		37308E691CCA14780086B7DD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 37308E681CCA14780086B7DD /* AppDelegate.m */; };
 		37308E6C1CCA63300086B7DD /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 37308E6B1CCA63300086B7DD /* UIView+Extension.m */; };
+		375B95901CCB5CFC004DF65E /* UIWindow+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 375B958F1CCB5CFC004DF65E /* UIWindow+Extension.m */; };
 		378E461B1CC8ACFA00DE8EF5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 378E461A1CC8ACFA00DE8EF5 /* main.m */; };
 		378E46261CC8ACFA00DE8EF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 378E46251CC8ACFA00DE8EF5 /* Assets.xcassets */; };
 		378E46341CC8ACFA00DE8EF5 /* OrangeStatusTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 378E46331CC8ACFA00DE8EF5 /* OrangeStatusTests.m */; };
@@ -28,6 +29,7 @@
 		378E46761CC8BA2A00DE8EF5 /* ZCProfileController.m in Sources */ = {isa = PBXBuildFile; fileRef = 378E46751CC8BA2A00DE8EF5 /* ZCProfileController.m */; };
 		37D120911CCB462C00CC2E28 /* ZCAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D120901CCB462C00CC2E28 /* ZCAccount.m */; };
 		37D120951CCB4AEF00CC2E28 /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D120941CCB4AEF00CC2E28 /* MBProgressHUD+MJ.m */; };
+		37D120991CCB521300CC2E28 /* ZCAccountTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D120981CCB521300CC2E28 /* ZCAccountTool.m */; };
 		37EFB0C11CCB2A4700C17723 /* ZCOAuthController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37EFB0C01CCB2A4700C17723 /* ZCOAuthController.m */; };
 		582315994CF84AF71259385E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8249A114EE53A17EF449A56E /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -68,6 +70,8 @@
 		37308E681CCA14780086B7DD /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		37308E6A1CCA63300086B7DD /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
 		37308E6B1CCA63300086B7DD /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		375B958E1CCB5CFC004DF65E /* UIWindow+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+Extension.h"; sourceTree = "<group>"; };
+		375B958F1CCB5CFC004DF65E /* UIWindow+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+Extension.m"; sourceTree = "<group>"; };
 		378E46161CC8ACFA00DE8EF5 /* OrangeStatus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OrangeStatus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		378E461A1CC8ACFA00DE8EF5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		378E46251CC8ACFA00DE8EF5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -95,6 +99,8 @@
 		37D120901CCB462C00CC2E28 /* ZCAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCAccount.m; sourceTree = "<group>"; };
 		37D120931CCB4AEF00CC2E28 /* MBProgressHUD+MJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+MJ.h"; sourceTree = "<group>"; };
 		37D120941CCB4AEF00CC2E28 /* MBProgressHUD+MJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+MJ.m"; sourceTree = "<group>"; };
+		37D120971CCB521300CC2E28 /* ZCAccountTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCAccountTool.h; sourceTree = "<group>"; };
+		37D120981CCB521300CC2E28 /* ZCAccountTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCAccountTool.m; sourceTree = "<group>"; };
 		37EFB0BF1CCB2A4700C17723 /* ZCOAuthController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCOAuthController.h; sourceTree = "<group>"; };
 		37EFB0C01CCB2A4700C17723 /* ZCOAuthController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCOAuthController.m; sourceTree = "<group>"; };
 		8249A114EE53A17EF449A56E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -137,6 +143,8 @@
 				37136B8A1CC8E8670052A2EA /* UIImage+Extension.m */,
 				37136B931CC9016C0052A2EA /* UIBarButtonItem+Extension.h */,
 				37136B941CC9016C0052A2EA /* UIBarButtonItem+Extension.m */,
+				375B958E1CCB5CFC004DF65E /* UIWindow+Extension.h */,
+				375B958F1CCB5CFC004DF65E /* UIWindow+Extension.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -453,9 +461,19 @@
 			path = Lib;
 			sourceTree = "<group>";
 		};
+		37D120961CCB51F000CC2E28 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				37D120971CCB521300CC2E28 /* ZCAccountTool.h */,
+				37D120981CCB521300CC2E28 /* ZCAccountTool.m */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
 		37EFB0BD1CCB2A1000C17723 /* OAuth */ = {
 			isa = PBXGroup;
 			children = (
+				37D120961CCB51F000CC2E28 /* Tool */,
 				37D1208E1CCB461700CC2E28 /* Model */,
 				37EFB0BE1CCB2A1000C17723 /* Controller */,
 			);
@@ -669,6 +687,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				37308E671CCA144D0086B7DD /* ZCNewfeatureController.m in Sources */,
+				375B95901CCB5CFC004DF65E /* UIWindow+Extension.m in Sources */,
 				37D120951CCB4AEF00CC2E28 /* MBProgressHUD+MJ.m in Sources */,
 				378E466D1CC8B9EC00DE8EF5 /* ZCNavigaionController.m in Sources */,
 				37136B981CC90B0C0052A2EA /* ZCTitleButton.m in Sources */,
@@ -686,6 +705,7 @@
 				378E46731CC8BA1700DE8EF5 /* ZCMessageController.m in Sources */,
 				37136B921CC8FEDD0052A2EA /* ZCTabBar.m in Sources */,
 				37308E6C1CCA63300086B7DD /* UIView+Extension.m in Sources */,
+				37D120991CCB521300CC2E28 /* ZCAccountTool.m in Sources */,
 				378E466A1CC8B9D000DE8EF5 /* ZCHomeController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
