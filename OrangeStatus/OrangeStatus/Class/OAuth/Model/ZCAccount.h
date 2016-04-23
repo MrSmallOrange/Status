@@ -13,6 +13,9 @@
 @property (nonatomic, copy) NSString *expires_in;
 @property (nonatomic, copy) NSString *uid;
 @property (nonatomic, strong) NSDate *create_time;
+/** 用户昵称*/
+@property (nonatomic, copy) NSString *name;
+
 
 + (instancetype)accountWithDictionary:(NSDictionary *)dictionary;
 

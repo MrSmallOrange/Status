@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ZCAccount.h"
 
 @class ZCAccount;
 @interface ZCAccountTool : NSObject

@@ -52,26 +52,22 @@
 {
     
     ZCHomeController *home = [[ZCHomeController alloc] init];
-    home.view.backgroundColor = [UIColor grayColor];
     UIImage *homeImage = [UIImage imageNamed:@"tabbar_home"];
     UIImage *homeSelectedImage = [UIImage imageWithOriginaName:@"tabbar_home_selected"];
     [self addOneChildViewController:home title:@"首页" image:homeImage selectedImage:homeSelectedImage];
     
     ZCMessageController *message = [[ZCMessageController alloc] init];
-    message.view.backgroundColor = [UIColor grayColor];
     UIImage *messageImage = [UIImage imageNamed:@"tabbar_message_center"];
     UIImage *selectedMessageImage = [UIImage imageWithOriginaName:@"tabbar_message_center_selected"];
     [self addOneChildViewController:message title:@"消息" image:messageImage selectedImage:selectedMessageImage];
     
     
     ZCDiscoverController *discover = [[ZCDiscoverController alloc] init];
-    discover.view.backgroundColor = [UIColor grayColor];
     UIImage *discoverImage = [UIImage imageNamed:@"tabbar_discover"];
     UIImage *selectedDiscoverImage = [UIImage imageWithOriginaName:@"tabbar_discover_selected"];
     [self addOneChildViewController:discover title:@"发现" image:discoverImage selectedImage:selectedDiscoverImage];
     
     ZCProfileController *profile = [[ZCProfileController alloc] init];
-    profile.view.backgroundColor = [UIColor grayColor];
     UIImage *profileImage = [UIImage imageNamed:@"tabbar_profile"];
     UIImage *selectedProfielImage = [UIImage imageWithOriginaName:@"tabbar_profile_selected"];
     [self addOneChildViewController:profile title:@"我" image:profileImage selectedImage:selectedProfielImage];

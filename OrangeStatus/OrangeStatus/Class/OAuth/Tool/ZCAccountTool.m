@@ -14,7 +14,6 @@
 + (void)saveAccount:(ZCAccount *)account
 {
     
-    account.create_time = [NSDate date];
 
     [NSKeyedArchiver archiveRootObject:account toFile:ZCAccountPath];
 
