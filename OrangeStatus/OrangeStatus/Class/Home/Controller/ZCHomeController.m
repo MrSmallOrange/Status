@@ -41,8 +41,61 @@
     
     [self setUserInfo];
     
-    [self loadNewStatus];
+//    [self loadNewStatus];
     
+    [self setupRefresh];
+    
+}
+
+- (void)setupRefresh
+{
+    UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
+    [self.view addSubview:refreshControl];
+    
+    [refreshControl addTarget:self action:@selector(refreshStateChange:) forControlEvents:UIControlEventValueChanged];
+}
+
+- (void)refreshStateChange:(UIRefreshControl *)refreshControl
+{
+    
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    
+    NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
+    ZCAccount *account = [ZCAccountTool account];
+    
+    //去除最前面的微博
+    ZCStatus *firstStatus = [self.status firstObject];
+    if (firstStatus) {
+        parameters[@"since_id"] = firstStatus.idstr;
+
+    }
+    
+    parameters[@"access_token"] = account.access_token;
+    
+    [manager GET:@"https://api.weibo.com/2/statuses/friends_timeline.json" parameters:parameters progress:^(NSProgress * _Nonnull downloadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
+        
+        
+        
+        NSArray *newStatus = [ZCStatus mj_objectArrayWithKeyValuesArray:responseObject[@"statuses"]];
+        
+        NSRange range = NSMakeRange(0, newStatus.count);
+        NSIndexSet *set = [NSIndexSet indexSetWithIndexesInRange:range];
+        
+        [self.status insertObjects:newStatus atIndexes:set];
+
+        
+        [self.tableView reloadData];
+        
+        //结束刷新
+        [refreshControl endRefreshing];
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"请求失败");
+        [refreshControl endRefreshing];
+        
+    }];
 }
 
 
@@ -88,7 +141,9 @@
         
 
         
-        self.status = [ZCStatus mj_objectArrayWithKeyValuesArray:responseObject[@"statuses"]];
+        NSArray *newStatus = [ZCStatus mj_objectArrayWithKeyValuesArray:responseObject[@"statuses"]];
+        
+        [self.status addObjectsFromArray:newStatus];
         
         [self.tableView reloadData];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
