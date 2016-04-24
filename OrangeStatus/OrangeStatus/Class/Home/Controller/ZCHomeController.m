@@ -16,6 +16,7 @@
 #import "ZCUser.h"
 #import "ZCStatus.h"
 #import "MJExtension.h"
+#import "ZCLoadMoreFooter.h"
 
 
 @interface ZCHomeController () <ZCDropDownMenuDelegate>
@@ -43,16 +44,37 @@
     
 //    [self loadNewStatus];
     
-    [self setupRefresh];
+    //下拉刷新
+    [self setupDownRefresh];
+    
+    //上啦刷新
+    [self setupUpRefresh];
     
 }
 
-- (void)setupRefresh
+- (void)setupUpRefresh
 {
+    ZCLoadMoreFooter *footer = [ZCLoadMoreFooter footer];
+    footer.hidden = YES;
+    self.tableView.tableFooterView = footer;
+
+}
+
+- (void)setupDownRefresh
+{
+    
+    //添加刷新控件
     UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
     [self.view addSubview:refreshControl];
-    
+    //只有手动刷新才会触发UIControlEventValueChanged事件
     [refreshControl addTarget:self action:@selector(refreshStateChange:) forControlEvents:UIControlEventValueChanged];
+    
+    //开始刷新,不会触发UIControlEventValueChanged事件
+    [refreshControl beginRefreshing];
+    
+    //马上加载数据
+    [self refreshStateChange:refreshControl];
+    
 }
 
 - (void)refreshStateChange:(UIRefreshControl *)refreshControl
@@ -77,8 +99,6 @@
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
         
-        
-        
         NSArray *newStatus = [ZCStatus mj_objectArrayWithKeyValuesArray:responseObject[@"statuses"]];
         
         NSRange range = NSMakeRange(0, newStatus.count);
@@ -91,6 +111,9 @@
         
         //结束刷新
         [refreshControl endRefreshing];
+        
+        //显示最新微博数量
+        [self showNewStatusCount:newStatus.count];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"请求失败");
         [refreshControl endRefreshing];
@@ -98,7 +121,52 @@
     }];
 }
 
+- (void)showNewStatusCount:(NSInteger)count
+{
+    UILabel *label = [[UILabel alloc] init];
+    label.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"timeline_new_status_background"]];
+    label.width = [UIScreen mainScreen].bounds.size.width;
+    label.height = 35;
+    
+    
+    if (count == 0) {
+        label.text = @"没有新的微博哦";
+    }else{
+        label.text = [NSString stringWithFormat:@"共有%ld条微博", count];
+    }
+    
+    label.textColor = [UIColor whiteColor];
+    label.font = [UIFont systemFontOfSize:17];
+    label.textAlignment = NSTextAlignmentCenter;
+    
+//    [self.navigationController.view addSubview:label];
+    label.y = 64 - label.height;
+    
 
+    [self.navigationController.view insertSubview:label belowSubview:self.navigationController.navigationBar];
+    
+    //动画
+    CGFloat duration = 1.0;
+    [UIView animateWithDuration:duration animations:^{
+//        label.y += label.height;
+        
+        label.transform = CGAffineTransformMakeTranslation(0, label.height);
+        
+    } completion:^(BOOL finished) {
+        CGFloat delay = 1.0;
+        [UIView animateWithDuration:duration delay:delay options:UIViewAnimationOptionCurveLinear animations:^{
+//            label.y -= label.height;
+            
+            label.transform = CGAffineTransformIdentity;
+            
+            
+            
+        } completion:^(BOOL finished) {
+            [label removeFromSuperview];
+        }];
+    }];
+    
+}
 
 - (void)loadNewStatus
 {
@@ -295,6 +363,67 @@
     [cell.imageView sd_setImageWithURL:[NSURL URLWithString:user.profile_image_url] placeholderImage:placehoder];
     
     return cell;
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    if (self.status.count == 0 || self.tableView.tableFooterView.isHidden == NO) {
+        return;
+    }
+    
+    CGFloat offsetY = scrollView.contentOffset.y;
+    
+    // 当最后一个cell完全显示在眼前时，contentOffset的y值
+    CGFloat judgeOffsetY = scrollView.contentSize.height + scrollView.contentInset.bottom - scrollView.height - self.tableView.tableFooterView.height;
+    
+    if (offsetY >= judgeOffsetY) { // 最后一个cell完全进入视野范围内
+        // 显示footer
+        self.tableView.tableFooterView.hidden = NO;
+        
+        // 加载更多的微博数据
+        [self loadMoreStatus];
+    }
+}
+
+- (void)loadMoreStatus
+{
+    AFHTTPSessionManager *maneger = [AFHTTPSessionManager manager];
+    
+    NSMutableDictionary *patameters = [NSMutableDictionary dictionary];
+    
+    ZCAccount *account = [ZCAccountTool account];
+    
+    patameters[@"access_token"] = account.access_token;
+    
+    // 取出最后面的微博（最新的微博，ID最大的微博）
+    ZCStatus *lastStatus = [self.status lastObject];
+    if (lastStatus) {
+        // 若指定此参数，则返回ID小于或等于max_id的微博，默认为0。
+        // id这种数据一般都是比较大的，一般转成整数的话，最好是long long类型
+        long long maxId = lastStatus.idstr.longLongValue - 1;
+        patameters[@"max_id"] = @(maxId);
+    }
+    
+
+    
+    [maneger GET:@"https://api.weibo.com/2/statuses/friends_timeline.json" parameters:patameters progress:^(NSProgress * _Nonnull downloadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
+        NSArray *dicArray = [ZCStatus mj_objectArrayWithKeyValuesArray:responseObject[@"statuses"]];
+        
+        [self.status addObjectsFromArray:dicArray];
+        
+        [self.tableView reloadData];
+        
+        // 结束刷新(隐藏footer)
+        self.tableView.tableFooterView.hidden = YES;
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        // 结束刷新(隐藏footer)
+        self.tableView.tableFooterView.hidden = YES;
+    }];
+    
 }
 
 @end
