@@ -17,22 +17,24 @@
 #import "ZCStatus.h"
 #import "MJExtension.h"
 #import "ZCLoadMoreFooter.h"
+#import "ZCStatusViewCell.h"
+#import "ZCStatusFrame.h"
 
 
 @interface ZCHomeController () <ZCDropDownMenuDelegate>
 /** 数组的一个元素是一条微博模型*/
-@property (nonatomic, strong) NSMutableArray *status;
+@property (nonatomic, strong) NSMutableArray *statusFrame;
 @end
 
 @implementation ZCHomeController
 
-- (NSMutableArray *)status
+- (NSMutableArray *)statusFrame
 {
-    if (_status == nil) {
-        _status = [NSMutableArray array];
+    if (_statusFrame == nil) {
+        _statusFrame = [NSMutableArray array];
     }
     
-    return _status;
+    return _statusFrame;
 }
 
 - (void)viewDidLoad {
@@ -117,9 +119,9 @@
     ZCAccount *account = [ZCAccountTool account];
     
     //去除最前面的微博
-    ZCStatus *firstStatus = [self.status firstObject];
+    ZCStatusFrame *firstStatus = [self.statusFrame firstObject];
     if (firstStatus) {
-        parameters[@"since_id"] = firstStatus.idstr;
+        parameters[@"since_id"] = firstStatus.status.idstr;
 
     }
     
@@ -132,10 +134,16 @@
         
         NSArray *newStatus = [ZCStatus mj_objectArrayWithKeyValuesArray:responseObject[@"statuses"]];
         
-        NSRange range = NSMakeRange(0, newStatus.count);
+        
+        NSArray *newFrame = [self statusFrameWithStatus:newStatus];
+        
+        
+        
+        
+        NSRange range = NSMakeRange(0, newFrame.count);
         NSIndexSet *set = [NSIndexSet indexSetWithIndexesInRange:range];
         
-        [self.status insertObjects:newStatus atIndexes:set];
+        [self.statusFrame insertObjects:newFrame atIndexes:set];
 
         
         [self.tableView reloadData];
@@ -150,6 +158,18 @@
         [refreshControl endRefreshing];
         
     }];
+}
+
+- (NSArray *)statusFrameWithStatus:(NSArray *)statuses
+{
+    NSMutableArray *frames = [NSMutableArray array];
+    for (ZCStatus *status in statuses) {
+        ZCStatusFrame *f = [[ZCStatusFrame alloc] init];
+        f.status = status;
+        [frames addObject:f];
+    }
+    
+    return frames;
 }
 
 - (void)showNewStatusCount:(NSInteger)count
@@ -203,56 +223,60 @@
     
 }
 
-- (void)loadNewStatus
-{
-    
-    /*  https://api.weibo.com/2/statuses/friends_timeline.json
-     
-     access_token	true	string	采用OAuth授权方式为必填参数，OAuth授权后获得。
-     
-     
-     created_at	string	微博创建时间
-     id	int64	微博ID
-     mid	int64	微博MID
-     idstr	string	字符串型的微博ID
-     text	string	微博信息内容
-     source	string	微博来源
-     favorited	boolean	是否已收藏，true：是，false：否
-     truncated	boolean	是否被截断，true：是，false：否
-     in_reply_to_status_id	string	（暂未支持）回复ID
-     in_reply_to_user_id	string	（暂未支持）回复人UID
-     in_reply_to_screen_name	string	（暂未支持）回复人昵称
-     thumbnail_pic	string	缩略图片地址，没有时不返回此字段
-     bmiddle_pic	string	中等尺寸图片地址，没有时不返回此字段
-     original_pic	string	原始图片地址，没有时不返回此字段
-     geo	object	地理信息字段 详细
-     user	object	微博作者的用户信息字段 详细
-     */
-    
-    
-    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    
-    NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
-    ZCAccount *account = [ZCAccountTool account];
-    parameters[@"access_token"] = account.access_token;
-//    parameters[@"count"] = @1;
-    
-    [manager GET:@"https://api.weibo.com/2/statuses/friends_timeline.json" parameters:parameters progress:^(NSProgress * _Nonnull downloadProgress) {
-        
-    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        
-        
+//- (void)loadNewStatus
+//{
+//    
+//    /*  https://api.weibo.com/2/statuses/friends_timeline.json
+//     
+//     access_token	true	string	采用OAuth授权方式为必填参数，OAuth授权后获得。
+//     
+//     
+//     created_at	string	微博创建时间
+//     id	int64	微博ID
+//     mid	int64	微博MID
+//     idstr	string	字符串型的微博ID
+//     text	string	微博信息内容
+//     source	string	微博来源
+//     favorited	boolean	是否已收藏，true：是，false：否
+//     truncated	boolean	是否被截断，true：是，false：否
+//     in_reply_to_status_id	string	（暂未支持）回复ID
+//     in_reply_to_user_id	string	（暂未支持）回复人UID
+//     in_reply_to_screen_name	string	（暂未支持）回复人昵称
+//     thumbnail_pic	string	缩略图片地址，没有时不返回此字段
+//     bmiddle_pic	string	中等尺寸图片地址，没有时不返回此字段
+//     original_pic	string	原始图片地址，没有时不返回此字段
+//     geo	object	地理信息字段 详细
+//     user	object	微博作者的用户信息字段 详细
+//     */
+//    
+//    
+//    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+//    
+//    NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
+//    ZCAccount *account = [ZCAccountTool account];
+//    parameters[@"access_token"] = account.access_token;
+////    parameters[@"count"] = @1;
+//    
+//    [manager GET:@"https://api.weibo.com/2/statuses/friends_timeline.json" parameters:parameters progress:^(NSProgress * _Nonnull downloadProgress) {
+//        
+//    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+//        
+//        
+//
+//        
+//        NSArray *newStatus = [ZCStatus mj_objectArrayWithKeyValuesArray:responseObject[@"statuses"]];
+//        
+//        [self.status addObjectsFromArray:newStatus];
+//        
+//        [self.tableView reloadData];
+//    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+//        NSLog(@"请求失败");
+//    }];
+//}
 
-        
-        NSArray *newStatus = [ZCStatus mj_objectArrayWithKeyValuesArray:responseObject[@"statuses"]];
-        
-        [self.status addObjectsFromArray:newStatus];
-        
-        [self.tableView reloadData];
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        NSLog(@"请求失败");
-    }];
-}
+
+
+
 - (void)setUserInfo
 {
     
@@ -365,44 +389,30 @@
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.status.count;
+    return self.statusFrame.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *ID = @"status";
-    
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
-    
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:ID];
-    }
-    
-    
-//    NSDictionary *status = self.status[indexPath.row];
-//    NSDictionary *user = status[@"user"];
-//    cell.textLabel.text = user[@"name"];
-//
-//    cell.detailTextLabel.text = status[@"text"];
-//    
-//    NSString *imageURL = user[@"profile_image_url"];
-    
-    ZCStatus *status = self.status[indexPath.row];
-    ZCUser *user = status.user;
-    cell.textLabel.text = user.name;
-    
-    cell.detailTextLabel.text = status.text;
 
     
-    UIImage *placehoder = [UIImage imageNamed:@"avatar_default_small"];
-    [cell.imageView sd_setImageWithURL:[NSURL URLWithString:user.profile_image_url] placeholderImage:placehoder];
+    ZCStatusViewCell *cell = [ZCStatusViewCell cellWithTableView:tableView];
+
+    cell.statusFrame = self.statusFrame[indexPath.row];
+
     
     return cell;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    ZCStatusFrame *frame = self.statusFrame[indexPath.row];
+    return frame.cellHeight;
+}
+
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
-    if (self.status.count == 0 || self.tableView.tableFooterView.isHidden == NO) {
+    if (self.statusFrame.count == 0 || self.tableView.tableFooterView.isHidden == NO) {
         return;
     }
     
@@ -431,11 +441,11 @@
     patameters[@"access_token"] = account.access_token;
     
     // 取出最后面的微博（最新的微博，ID最大的微博）
-    ZCStatus *lastStatus = [self.status lastObject];
+    ZCStatusFrame *lastStatus = [self.statusFrame lastObject];
     if (lastStatus) {
         // 若指定此参数，则返回ID小于或等于max_id的微博，默认为0。
         // id这种数据一般都是比较大的，一般转成整数的话，最好是long long类型
-        long long maxId = lastStatus.idstr.longLongValue - 1;
+        long long maxId = lastStatus.status.idstr.longLongValue - 1;
         patameters[@"max_id"] = @(maxId);
     }
     
@@ -445,9 +455,12 @@
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
-        NSArray *dicArray = [ZCStatus mj_objectArrayWithKeyValuesArray:responseObject[@"statuses"]];
+        NSArray *newStatus = [ZCStatus mj_objectArrayWithKeyValuesArray:responseObject[@"statuses"]];
         
-        [self.status addObjectsFromArray:dicArray];
+        NSArray *newFrame = [self statusFrameWithStatus:newStatus];
+
+        
+        [self.statusFrame addObjectsFromArray:newFrame];
         
         [self.tableView reloadData];
         
