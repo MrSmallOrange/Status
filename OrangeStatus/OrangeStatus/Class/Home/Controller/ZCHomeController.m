@@ -50,6 +50,37 @@
     //上啦刷新
     [self setupUpRefresh];
     
+    // 获得未读数
+    NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(setupUnreadCount) userInfo:nil repeats:YES];
+    // 主线程也会抽时间处理一下timer（不管主线程是否正在其他事件）
+    [[NSRunLoop mainRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
+    
+}
+
+- (void)setupUnreadCount
+{
+    ZCAccount *account = [ZCAccountTool account];
+    
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    
+    NSMutableDictionary *patameters = [NSMutableDictionary dictionary];
+    patameters[@"access_token"] = account.access_token;
+    patameters[@"uid"] = account.uid;
+    
+    [manager GET:@"https://rm.api.weibo.com/2/remind/unread_count.json" parameters:patameters progress:^(NSProgress * _Nonnull downloadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSString *status = [responseObject[@"status"] description];
+        if ([status isEqualToString:@"0"]) {
+            self.tabBarItem.badgeValue = nil;
+            [UIApplication sharedApplication].applicationIconBadgeNumber = 0;
+        }else{
+            self.tabBarItem.badgeValue = status;
+            [UIApplication sharedApplication].applicationIconBadgeNumber = status.intValue;
+        }
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+    }];
 }
 
 - (void)setupUpRefresh
@@ -123,6 +154,10 @@
 
 - (void)showNewStatusCount:(NSInteger)count
 {
+    
+    self.tabBarItem.badgeValue = nil;
+    [UIApplication sharedApplication].applicationIconBadgeNumber = 0;
+    
     UILabel *label = [[UILabel alloc] init];
     label.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"timeline_new_status_background"]];
     label.width = [UIScreen mainScreen].bounds.size.width;
