@@ -47,4 +47,6 @@
 @property (nonatomic, assign) CGRect retweetContentLabelFrame;
 /** 转发微博配图*/
 @property (nonatomic, assign) CGRect retweetPhotoViewFrame;
+/** 工具条*/
+@property (nonatomic, assign) CGRect toolbarFrame;
 @end

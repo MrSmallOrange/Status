@@ -12,6 +12,7 @@
 #import "ZCUser.h"
 #import "UIImageView+WebCache.h"
 #import "ZCPhoto.h"
+#import "ZCStatusToolbar.h"
 
 @interface ZCStatusViewCell ()
 /** 原创微博*/
@@ -36,6 +37,8 @@
 @property (nonatomic, weak) UILabel *retweetContentLabel;
 /** 转发微博配图*/
 @property (nonatomic, weak) UIImageView *retweetPhotoView;
+/** 工具条*/
+@property (nonatomic, weak) ZCStatusToolbar *toolbar;
 
 @end
 
@@ -57,10 +60,15 @@
 {
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
         
+        self.backgroundColor = [UIColor clearColor];
+        self.selectionStyle = UITableViewCellSelectionStyleNone;
+        
         //初始化原创微博
         [self setupOriginal];
         //初始化转发微博
         [self setupRetweet];
+        //初始化工具条
+        [self setupToolbar];
     }
     return  self;
 }
@@ -69,6 +77,7 @@
 {
     UIView *originalView = [[UIView alloc] init];
     [self.contentView addSubview:originalView];
+    originalView.backgroundColor = [UIColor whiteColor];
     self.originalView = originalView;
     
     
@@ -111,7 +120,6 @@
     UILabel *contentLabel = [[UILabel alloc] init];
     [originalView addSubview:contentLabel];
     contentLabel.numberOfLines = 0;
-    contentLabel.backgroundColor = [UIColor blueColor];
     contentLabel.font = ZCStatusCellContentFont;
     self.contentLabel = contentLabel;
     
@@ -123,12 +131,12 @@
 {
     UIView *retweetView = [[UIView alloc] init];
     [self.contentView addSubview:retweetView];
+    retweetView.backgroundColor = ZCColor(247, 247, 247);
     self.retweetView = retweetView;
     
     
     UILabel *retweetContentLabel = [[UILabel alloc] init];
     [retweetView addSubview:retweetContentLabel];
-    retweetContentLabel.backgroundColor = [UIColor redColor];
     retweetContentLabel.numberOfLines = 0;
     retweetContentLabel.font = ZCStatusCellContentFont;
     self.retweetContentLabel = retweetContentLabel;
@@ -139,6 +147,15 @@
     self.retweetPhotoView = retweetPhotoView;
     
     
+}
+
+- (void)setupToolbar
+{
+    ZCStatusToolbar *toolbar = [ZCStatusToolbar toolbar];
+                                
+    [self.contentView addSubview:toolbar];
+    
+    self.toolbar = toolbar;
 }
 - (void)setStatusFrame:(ZCStatusFrame *)statusFrame
 {
@@ -214,7 +231,6 @@
         NSString *retweetContent = [NSString stringWithFormat:@"@%@ : %@", retweeted_status_user.name, retweeted_status.text];
         self.retweetContentLabel.text = retweetContent;
         self.retweetContentLabel.frame = statusFrame.retweetContentLabelFrame;
-        NSLog(@"%@", retweetContent);
         if (retweeted_status.pic_urls.count) {
             
             ZCPhoto *photo = retweeted_status.pic_urls[0];
@@ -232,7 +248,7 @@
         self.retweetView.hidden = YES;
     }
     
-    
+    self.toolbar.frame = statusFrame.toolbarFrame;
     
 }
 

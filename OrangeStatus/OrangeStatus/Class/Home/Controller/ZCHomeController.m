@@ -42,6 +42,8 @@
     
     [self setNavigation];
     
+    self.tableView.backgroundColor = ZCColor(211, 211, 211);
+    
     [self setUserInfo];
     
 //    [self loadNewStatus];

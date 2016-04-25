@@ -11,6 +11,7 @@
 #import "ZCStatus.h"
 #import "ZCPhoto.h"
 #define ZCStatusCellBorderWidth 10
+#define ZCStatusCellMargin 15
 
 @implementation ZCStatusFrame
 
@@ -86,11 +87,11 @@
     
     
     CGFloat originalX = 0;
-    CGFloat originalY = 0;
+    CGFloat originalY = ZCStatusCellMargin;
     CGFloat originalWidth = cellWidth;
     self.originalViewFrame = CGRectMake(originalX, originalY, originalWidth, originalHeight);
     
-    
+    CGFloat toolbarY = 0;
     if (status.retweeted_status) {
         
         ZCStatus *retweeted_status = status.retweeted_status;
@@ -124,14 +125,20 @@
         CGFloat retweetViewWidth = cellWidth;
         self.retweetViewFrame = CGRectMake(retweetViewX, retweetViewY, retweetViewWidth, retweetViewHeight);
 
+        toolbarY = CGRectGetMaxY(self.retweetViewFrame);
         
-        self.cellHeight = CGRectGetMaxY(self.retweetViewFrame) + ZCStatusCellBorderWidth;
 
     }else{
-        self.cellHeight = CGRectGetMaxY(self.originalViewFrame) + ZCStatusCellBorderWidth;
+        toolbarY = CGRectGetMaxY(self.originalViewFrame) + 1;
     }
     
+    CGFloat toolbarX = 0;
+    CGFloat toolbarWidth = cellWidth;
+    CGFloat toolbarHeight = 35;
+    self.toolbarFrame = CGRectMake(toolbarX, toolbarY, toolbarWidth, toolbarHeight);
     
+    self.cellHeight = CGRectGetMaxY(self.toolbarFrame);
+
     
 }
 @end
