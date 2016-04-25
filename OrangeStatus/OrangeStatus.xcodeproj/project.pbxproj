@@ -53,6 +53,7 @@
 		37EFB0C11CCB2A4700C17723 /* ZCOAuthController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37EFB0C01CCB2A4700C17723 /* ZCOAuthController.m */; };
 		37F165831CCC649000C998E0 /* ZCLoadMoreFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 37F165821CCC649000C998E0 /* ZCLoadMoreFooter.m */; };
 		37F165871CCC652D00C998E0 /* ZCLoadMoreFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37F165861CCC652D00C998E0 /* ZCLoadMoreFooter.xib */; };
+		37F3DE041CCDBEFB002B38E4 /* ZCPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 37F3DE031CCDBEFB002B38E4 /* ZCPhoto.m */; };
 		582315994CF84AF71259385E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8249A114EE53A17EF449A56E /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -169,6 +170,8 @@
 		37F165811CCC649000C998E0 /* ZCLoadMoreFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCLoadMoreFooter.h; sourceTree = "<group>"; };
 		37F165821CCC649000C998E0 /* ZCLoadMoreFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCLoadMoreFooter.m; sourceTree = "<group>"; };
 		37F165861CCC652D00C998E0 /* ZCLoadMoreFooter.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZCLoadMoreFooter.xib; sourceTree = "<group>"; };
+		37F3DE021CCDBEFB002B38E4 /* ZCPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCPhoto.h; sourceTree = "<group>"; };
+		37F3DE031CCDBEFB002B38E4 /* ZCPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCPhoto.m; sourceTree = "<group>"; };
 		8249A114EE53A17EF449A56E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		852B2C352667A9315195F049 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		AF1BABFCAADD62A2207024F6 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -396,6 +399,8 @@
 				37CA63401CCBB23600C6F230 /* ZCStatus.m */,
 				376A6F5B1CCCA8390028D84D /* ZCStatusFrame.h */,
 				376A6F5C1CCCA8390028D84D /* ZCStatusFrame.m */,
+				37F3DE021CCDBEFB002B38E4 /* ZCPhoto.h */,
+				37F3DE031CCDBEFB002B38E4 /* ZCPhoto.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -824,6 +829,7 @@
 				3793CAC81CCBAAEA00ED486F /* UIImageView+WebCache.m in Sources */,
 				37CA63411CCBB23600C6F230 /* ZCStatus.m in Sources */,
 				3793CAC31CCBAAEA00ED486F /* UIButton+WebCache.m in Sources */,
+				37F3DE041CCDBEFB002B38E4 /* ZCPhoto.m in Sources */,
 				37308E691CCA14780086B7DD /* AppDelegate.m in Sources */,
 				37308E5A1CC9EC910086B7DD /* ZCSearchBar.m in Sources */,
 				37F165831CCC649000C998E0 /* ZCLoadMoreFooter.m in Sources */,

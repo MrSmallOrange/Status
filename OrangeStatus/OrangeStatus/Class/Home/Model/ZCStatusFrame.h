@@ -14,6 +14,8 @@
 #define ZCStatusCellNameFont [UIFont systemFontOfSize:15]
 #define ZCStatusCellTimeFont [UIFont systemFontOfSize:12]
 #define ZCStatusCellSourceFont [UIFont systemFontOfSize:12]
+#define ZCStatusCellContentFont [UIFont systemFontOfSize:15]
+#define ZCStatusCellRetweetContentFont [UIFont systemFontOfSize:12]
 
 
 @class ZCStatus;
@@ -39,5 +41,10 @@
 @property (nonatomic, assign) CGRect contentLabelFrame;
 /** cell的高度*/
 @property (nonatomic, assign) CGFloat cellHeight;
-
+/** 转发微博整体*/
+@property (nonatomic, assign) CGRect retweetViewFrame;
+/** 转发微博正文内容*/
+@property (nonatomic, assign) CGRect retweetContentLabelFrame;
+/** 转发微博配图*/
+@property (nonatomic, assign) CGRect retweetPhotoViewFrame;
 @end

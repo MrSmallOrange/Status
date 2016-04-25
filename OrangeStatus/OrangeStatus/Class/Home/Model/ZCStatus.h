@@ -23,8 +23,10 @@
 @property (nonatomic, copy) NSString *created_at;
 /** 微博来源*/
 @property (nonatomic, copy) NSString *source;
-
-
+/** 数组里面的元素是图片的路径*/
+@property (nonatomic, strong) NSArray *pic_urls;
+/** 转发微博*/
+@property (nonatomic, strong) ZCStatus *retweeted_status;
 
 
 @end
