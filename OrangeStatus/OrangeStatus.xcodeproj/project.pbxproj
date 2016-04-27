@@ -45,11 +45,14 @@
 		3793CAC71CCBAAEA00ED486F /* UIImageView+HighlightedWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 3793CAB51CCBAAEA00ED486F /* UIImageView+HighlightedWebCache.m */; };
 		3793CAC81CCBAAEA00ED486F /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 3793CAB71CCBAAEA00ED486F /* UIImageView+WebCache.m */; };
 		3793CAC91CCBAAEA00ED486F /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3793CAB91CCBAAEA00ED486F /* UIView+WebCacheOperation.m */; };
+		37B7FFC81CD0A850005D4236 /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 37B7FFC71CD0A850005D4236 /* NSString+Extension.m */; };
+		37B7FFCB1CD0B3F2005D4236 /* ZCStatusPhotosView.m in Sources */ = {isa = PBXBuildFile; fileRef = 37B7FFCA1CD0B3F2005D4236 /* ZCStatusPhotosView.m */; };
 		37CA633E1CCBB22700C6F230 /* ZCUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 37CA633D1CCBB22700C6F230 /* ZCUser.m */; };
 		37CA63411CCBB23600C6F230 /* ZCStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 37CA63401CCBB23600C6F230 /* ZCStatus.m */; };
 		37D120911CCB462C00CC2E28 /* ZCAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D120901CCB462C00CC2E28 /* ZCAccount.m */; };
 		37D120951CCB4AEF00CC2E28 /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D120941CCB4AEF00CC2E28 /* MBProgressHUD+MJ.m */; };
 		37D120991CCB521300CC2E28 /* ZCAccountTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D120981CCB521300CC2E28 /* ZCAccountTool.m */; };
+		37EBA28C1CD093EF00712829 /* NSDate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 37EBA28B1CD093EF00712829 /* NSDate+Extension.m */; };
 		37ECB4E21CCE641500E6FA94 /* ZCStatusToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 37ECB4E11CCE641500E6FA94 /* ZCStatusToolbar.m */; };
 		37EFB0C11CCB2A4700C17723 /* ZCOAuthController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37EFB0C01CCB2A4700C17723 /* ZCOAuthController.m */; };
 		37F165831CCC649000C998E0 /* ZCLoadMoreFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 37F165821CCC649000C998E0 /* ZCLoadMoreFooter.m */; };
@@ -156,6 +159,10 @@
 		3793CAB71CCBAAEA00ED486F /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
 		3793CAB81CCBAAEA00ED486F /* UIView+WebCacheOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WebCacheOperation.h"; sourceTree = "<group>"; };
 		3793CAB91CCBAAEA00ED486F /* UIView+WebCacheOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WebCacheOperation.m"; sourceTree = "<group>"; };
+		37B7FFC61CD0A850005D4236 /* NSString+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extension.h"; sourceTree = "<group>"; };
+		37B7FFC71CD0A850005D4236 /* NSString+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extension.m"; sourceTree = "<group>"; };
+		37B7FFC91CD0B3F2005D4236 /* ZCStatusPhotosView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCStatusPhotosView.h; sourceTree = "<group>"; };
+		37B7FFCA1CD0B3F2005D4236 /* ZCStatusPhotosView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCStatusPhotosView.m; sourceTree = "<group>"; };
 		37CA633C1CCBB22700C6F230 /* ZCUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCUser.h; sourceTree = "<group>"; };
 		37CA633D1CCBB22700C6F230 /* ZCUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCUser.m; sourceTree = "<group>"; };
 		37CA633F1CCBB23600C6F230 /* ZCStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCStatus.h; sourceTree = "<group>"; };
@@ -166,6 +173,8 @@
 		37D120941CCB4AEF00CC2E28 /* MBProgressHUD+MJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+MJ.m"; sourceTree = "<group>"; };
 		37D120971CCB521300CC2E28 /* ZCAccountTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCAccountTool.h; sourceTree = "<group>"; };
 		37D120981CCB521300CC2E28 /* ZCAccountTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCAccountTool.m; sourceTree = "<group>"; };
+		37EBA28A1CD093EF00712829 /* NSDate+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Extension.h"; sourceTree = "<group>"; };
+		37EBA28B1CD093EF00712829 /* NSDate+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Extension.m"; sourceTree = "<group>"; };
 		37ECB4E01CCE641500E6FA94 /* ZCStatusToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCStatusToolbar.h; sourceTree = "<group>"; };
 		37ECB4E11CCE641500E6FA94 /* ZCStatusToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCStatusToolbar.m; sourceTree = "<group>"; };
 		37EFB0BF1CCB2A4700C17723 /* ZCOAuthController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCOAuthController.h; sourceTree = "<group>"; };
@@ -217,6 +226,10 @@
 				37136B941CC9016C0052A2EA /* UIBarButtonItem+Extension.m */,
 				375B958E1CCB5CFC004DF65E /* UIWindow+Extension.h */,
 				375B958F1CCB5CFC004DF65E /* UIWindow+Extension.m */,
+				37EBA28A1CD093EF00712829 /* NSDate+Extension.h */,
+				37EBA28B1CD093EF00712829 /* NSDate+Extension.m */,
+				37B7FFC61CD0A850005D4236 /* NSString+Extension.h */,
+				37B7FFC71CD0A850005D4236 /* NSString+Extension.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -420,6 +433,8 @@
 				376A6F591CCC9CA30028D84D /* ZCStatusViewCell.m */,
 				37ECB4E01CCE641500E6FA94 /* ZCStatusToolbar.h */,
 				37ECB4E11CCE641500E6FA94 /* ZCStatusToolbar.m */,
+				37B7FFC91CD0B3F2005D4236 /* ZCStatusPhotosView.h */,
+				37B7FFCA1CD0B3F2005D4236 /* ZCStatusPhotosView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -828,6 +843,7 @@
 				37CA633E1CCBB22700C6F230 /* ZCUser.m in Sources */,
 				3793CABC1CCBAAEA00ED486F /* SDImageCache.m in Sources */,
 				3793CAC51CCBAAEA00ED486F /* UIImage+MultiFormat.m in Sources */,
+				37B7FFC81CD0A850005D4236 /* NSString+Extension.m in Sources */,
 				3793CAC41CCBAAEA00ED486F /* UIImage+GIF.m in Sources */,
 				3793CABF1CCBAAEA00ED486F /* SDWebImageDownloader.m in Sources */,
 				37D120911CCB462C00CC2E28 /* ZCAccount.m in Sources */,
@@ -838,9 +854,11 @@
 				37308E691CCA14780086B7DD /* AppDelegate.m in Sources */,
 				37308E5A1CC9EC910086B7DD /* ZCSearchBar.m in Sources */,
 				37F165831CCC649000C998E0 /* ZCLoadMoreFooter.m in Sources */,
+				37B7FFCB1CD0B3F2005D4236 /* ZCStatusPhotosView.m in Sources */,
 				37EFB0C11CCB2A4700C17723 /* ZCOAuthController.m in Sources */,
 				378E46761CC8BA2A00DE8EF5 /* ZCProfileController.m in Sources */,
 				378E461B1CC8ACFA00DE8EF5 /* main.m in Sources */,
+				37EBA28C1CD093EF00712829 /* NSDate+Extension.m in Sources */,
 				378E46671CC8B9BF00DE8EF5 /* ZCDiscoverController.m in Sources */,
 				376A6F5A1CCC9CA30028D84D /* ZCStatusViewCell.m in Sources */,
 				3793CAC01CCBAAEA00ED486F /* SDWebImageDownloaderOperation.m in Sources */,

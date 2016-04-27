@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+@class ZCStatus;
 @interface ZCStatusToolbar : UIView
 + (instancetype)toolbar;
+/** 模型*/
+@property (nonatomic, strong) ZCStatus *status;
 @end

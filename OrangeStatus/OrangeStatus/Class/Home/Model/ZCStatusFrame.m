@@ -10,25 +10,10 @@
 #import "ZCUser.h"
 #import "ZCStatus.h"
 #import "ZCPhoto.h"
-#define ZCStatusCellBorderWidth 10
-#define ZCStatusCellMargin 15
+
 
 @implementation ZCStatusFrame
 
-- (CGSize)sizeWithText:(NSString *)text font:(UIFont *)font maxWidth:(CGFloat)maxWidth
-{
-    NSMutableDictionary *attribute = [NSMutableDictionary dictionary];
-    attribute[NSFontAttributeName] = font;
-    CGSize maxSize = CGSizeMake(maxWidth, MAXFLOAT);
-    return [text boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:attribute context:nil].size;
-    
-    
-}
-
-- (CGSize)sizeWithText:(NSString *)text font:(UIFont *)font
-{
-    return [self sizeWithText:text font:font maxWidth:MAXFLOAT];
-}
 
 - (void)setStatus:(ZCStatus *)status
 {
@@ -44,7 +29,8 @@
     
     CGFloat nameX = CGRectGetMaxX(self.iconFrame) + ZCStatusCellBorderWidth;
     CGFloat nameY = iconY;
-    CGSize nameSize = [self sizeWithText:user.name font:ZCStatusCellNameFont];
+    CGSize nameSize = [user.name sizeWithFont:ZCStatusCellNameFont];
+//    CGSize nameSize = [self sizeWithText:user.name font:ZCStatusCellNameFont];
     self.nameLabelFrame  = (CGRect){{nameX, nameY}, nameSize};
     
     if (user.isVip) {
@@ -58,19 +44,20 @@
     
     CGFloat timeX = nameX;
     CGFloat timeY = CGRectGetMaxY(self.nameLabelFrame) + ZCStatusCellBorderWidth;
-    CGSize timeSize = [self sizeWithText:status.created_at font:ZCStatusCellTimeFont];
+    CGSize timeSize = [status.created_at sizeWithFont:ZCStatusCellTimeFont];
     self.timeLabelFrame  = (CGRect){{timeX, timeY}, timeSize};
 
     CGFloat sourceX = CGRectGetMaxX(self.timeLabelFrame) + ZCStatusCellBorderWidth;
     CGFloat sourceY = timeY;
-    CGSize sourceSize = [self sizeWithText:status.source font:ZCStatusCellSourceFont];
+    CGSize sourceSize = [status.source sizeWithFont:ZCStatusCellSourceFont];
     self.sourceLabelFrame  = (CGRect){{sourceX, sourceY}, sourceSize};
     
     
     CGFloat contentX = iconX;
     CGFloat contentY = MAX(CGRectGetMaxY(self.iconFrame), CGRectGetMaxY(self.timeLabelFrame));
     CGFloat maxWidth = cellWidth - 2 * ZCStatusCellBorderWidth;
-    CGSize contentSize = [self sizeWithText:status.text font:ZCStatusCellContentFont maxWidth:maxWidth];
+    CGSize contentSize = [status.text sizeWithFont:ZCStatusCellContentFont maxWidth:maxWidth];
+//    CGSize contentSize = [self sizeWithText:status.text font:ZCStatusCellContentFont maxWidth:maxWidth];
     self.contentLabelFrame  = (CGRect){{contentX, contentY}, contentSize};
     
     
@@ -79,8 +66,8 @@
         CGFloat photoWH = 80;
         CGFloat photoX = contentX;
         CGFloat photoY = CGRectGetMaxY(self.contentLabelFrame) + ZCStatusCellBorderWidth;
-        self.photoViewFrame = CGRectMake(photoX, photoY, photoWH, photoWH);
-        originalHeight = CGRectGetMaxY(self.photoViewFrame) + ZCStatusCellBorderWidth;
+        self.photosViewFrame = CGRectMake(photoX, photoY, photoWH, photoWH);
+        originalHeight = CGRectGetMaxY(self.photosViewFrame) + ZCStatusCellBorderWidth;
     }else{
         originalHeight = CGRectGetMaxY(self.contentLabelFrame) + ZCStatusCellBorderWidth;
     }
@@ -101,7 +88,8 @@
         
         CGFloat retweetContentX = ZCStatusCellBorderWidth;
         CGFloat retweetContentY = ZCStatusCellBorderWidth;
-        CGSize retweetContentSize = [self sizeWithText:retweetContent font:ZCStatusCellRetweetContentFont maxWidth:maxWidth];
+        CGSize retweetContentSize = [retweetContent sizeWithFont:ZCStatusCellRetweetContentFont maxWidth:maxWidth];
+//        CGSize retweetContentSize = [self sizeWithText:retweetContent font:ZCStatusCellRetweetContentFont maxWidth:maxWidth];
         self.retweetContentLabelFrame  = (CGRect){{retweetContentX, retweetContentY}, retweetContentSize};
         
         CGFloat retweetViewHeight = 0;
@@ -110,11 +98,11 @@
             CGFloat retweetPhotoWH = 50;
             CGFloat retweetPhotoX = retweetContentX;
             CGFloat retweetPhotoY = CGRectGetMaxY(self.retweetContentLabelFrame) + ZCStatusCellBorderWidth;
-            self.retweetPhotoViewFrame = CGRectMake(retweetPhotoX, retweetPhotoY, retweetPhotoWH, retweetPhotoWH);
+            self.retweetPhotosViewFrame = CGRectMake(retweetPhotoX, retweetPhotoY, retweetPhotoWH, retweetPhotoWH);
         
             
             
-            retweetViewHeight = CGRectGetMaxY(self.retweetPhotoViewFrame) + ZCStatusCellBorderWidth;
+            retweetViewHeight = CGRectGetMaxY(self.retweetPhotosViewFrame) + ZCStatusCellBorderWidth;
         }else{
             retweetViewHeight = CGRectGetMaxY(self.retweetContentLabelFrame) + ZCStatusCellBorderWidth;
         }

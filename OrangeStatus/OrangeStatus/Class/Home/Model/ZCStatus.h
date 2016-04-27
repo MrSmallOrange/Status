@@ -27,6 +27,14 @@
 @property (nonatomic, strong) NSArray *pic_urls;
 /** 转发微博*/
 @property (nonatomic, strong) ZCStatus *retweeted_status;
+/** 转发数*/
+@property (nonatomic, assign) int reposts_count;
+/** 评论数*/
+@property (nonatomic, assign) int comments_count;
+/** 点赞数*/
+@property (nonatomic, assign) int attitudes_count;
+
+
 
 
 @end

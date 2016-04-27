@@ -13,6 +13,7 @@
 #import "UIImageView+WebCache.h"
 #import "ZCPhoto.h"
 #import "ZCStatusToolbar.h"
+#import "ZCStatusPhotosView.h"
 
 @interface ZCStatusViewCell ()
 /** 原创微博*/
@@ -22,7 +23,7 @@
 /** 会员图标*/
 @property (nonatomic, weak) UIImageView *vipView;
 /** 配图*/
-@property (nonatomic, weak) UIImageView *photoView;
+@property (nonatomic, weak) ZCStatusPhotosView *photosView;
 /** 昵称*/
 @property (nonatomic, weak) UILabel *nameLabel;
 /** 时间*/
@@ -36,7 +37,7 @@
 /** 转发微博正文内容*/
 @property (nonatomic, weak) UILabel *retweetContentLabel;
 /** 转发微博配图*/
-@property (nonatomic, weak) UIImageView *retweetPhotoView;
+@property (nonatomic, weak) ZCStatusPhotosView *retweetPhotosView;
 /** 工具条*/
 @property (nonatomic, weak) ZCStatusToolbar *toolbar;
 
@@ -92,10 +93,10 @@
     self.vipView = vipView;
     
     
-    UIImageView *photoView = [[UIImageView alloc] init];
-    [originalView addSubview:photoView];
-    photoView.backgroundColor = [UIColor redColor];
-    self.photoView = photoView;
+    ZCStatusPhotosView *photosView = [[ZCStatusPhotosView alloc] init];
+    [originalView addSubview:photosView];
+    photosView.backgroundColor = [UIColor redColor];
+    self.photosView = photosView;
     
     
     
@@ -105,13 +106,17 @@
     self.nameLabel = nameLabel;
     
     
+    
+    
     UILabel *timeLabel = [[UILabel alloc] init];
+    timeLabel.textColor = [UIColor orangeColor];
     [originalView addSubview:timeLabel];
     timeLabel.font = ZCStatusCellTimeFont;
     self.timeLabel = timeLabel;
     
     
     UILabel *sourceLabel = [[UILabel alloc] init];
+    [sourceLabel sizeToFit];
     sourceLabel.font = ZCStatusCellSourceFont;
     [originalView addSubview:sourceLabel];
     self.sourceLabel = sourceLabel;
@@ -142,9 +147,9 @@
     self.retweetContentLabel = retweetContentLabel;
     
     
-    UIImageView *retweetPhotoView = [[UIImageView alloc] init];
-    [retweetView addSubview:retweetPhotoView];
-    self.retweetPhotoView = retweetPhotoView;
+    ZCStatusPhotosView *retweetPhotosView = [[ZCStatusPhotosView alloc] init];
+    [retweetView addSubview:retweetPhotosView];
+    self.retweetPhotosView = retweetPhotosView;
     
     
 }
@@ -186,30 +191,34 @@
     
     if (status.pic_urls.count) {
         
-        ZCPhoto *photo = status.pic_urls[0];
+//        ZCPhoto *photo = status.pic_urls[0];
         
-        self.photoView.frame = statusFrame.photoViewFrame;
-        [self.photoView sd_setImageWithURL:[NSURL URLWithString:photo.thumbnail_pic] placeholderImage:[UIImage imageNamed:@"timeline_image_placeholder"]];
-        self.photoView.hidden = NO;
+        self.photosView.frame = statusFrame.photosViewFrame;
+#warning 设置图片
+        
+        self.photosView.hidden = NO;
         
     }else{
-        self.photoView.hidden  = YES;
+        self.photosView.hidden  = YES;
     }
-    
-
     
     self.nameLabel.text = user.name;
     self.nameLabel.frame = statusFrame.nameLabelFrame;
     
+    NSString *time = status.created_at;
+    CGFloat timeX = statusFrame.nameLabelFrame.origin.x;
+    CGFloat timeY = CGRectGetMaxY(statusFrame.nameLabelFrame) + ZCStatusCellBorderWidth;
+    CGSize timeSize = [time sizeWithFont:ZCStatusCellTimeFont];
+    self.timeLabel.frame  = (CGRect){{timeX, timeY}, timeSize};
+    self.timeLabel.text = time;
     
-    
-    self.timeLabel.text = status.created_at;
-    self.timeLabel.frame = statusFrame.timeLabelFrame;
-    
-    
-    
+    CGFloat sourceX = CGRectGetMaxX(self.timeLabel.frame) + ZCStatusCellBorderWidth;
+    CGFloat sourceY = timeY;
+    CGSize sourceSize = [status.source sizeWithFont:ZCStatusCellSourceFont];
+    self.sourceLabel.frame  = (CGRect){{sourceX, sourceY}, sourceSize};
     self.sourceLabel.text = status.source;
-    self.sourceLabel.frame = statusFrame.sourceLabelFrame;
+    
+    
     
     
     
@@ -231,16 +240,16 @@
         NSString *retweetContent = [NSString stringWithFormat:@"@%@ : %@", retweeted_status_user.name, retweeted_status.text];
         self.retweetContentLabel.text = retweetContent;
         self.retweetContentLabel.frame = statusFrame.retweetContentLabelFrame;
+        
+        
         if (retweeted_status.pic_urls.count) {
             
-            ZCPhoto *photo = retweeted_status.pic_urls[0];
-            
-            self.retweetPhotoView.frame = statusFrame.retweetPhotoViewFrame;
-            [self.retweetPhotoView sd_setImageWithURL:[NSURL URLWithString:photo.thumbnail_pic] placeholderImage:[UIImage imageNamed:@"timeline_image_placeholder"]];
-            self.retweetPhotoView.hidden = NO;
+#warning 设置图片
+            self.retweetPhotosView.frame = statusFrame.retweetPhotosViewFrame;
+            self.retweetPhotosView.hidden = NO;
             
         }else{
-            self.retweetPhotoView.hidden  = YES;
+            self.retweetPhotosView.hidden  = YES;
         }
         
         
@@ -249,6 +258,7 @@
     }
     
     self.toolbar.frame = statusFrame.toolbarFrame;
+    self.toolbar.status = statusFrame.status;
     
 }
 
