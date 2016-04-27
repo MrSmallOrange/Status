@@ -7,7 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
-
+typedef enum {
+    ZCUserVerifiedTypeNone = -1, // 没有任何认证
+    
+    ZCUserVerifiedPersonal = 0,  // 个人认证
+    
+    ZCUserVerifiedOrgEnterprice = 2, // 企业官方：CSDN、EOE、搜狐新闻客户端
+    ZCUserVerifiedOrgMedia = 3, // 媒体官方：程序员杂志、苹果汇
+    ZCUserVerifiedOrgWebsite = 5, // 网站官方：猫扑
+    
+    ZCUserVerifiedDaren = 220 // 微博达人
+} ZCUserVerifiedType;
 @interface ZCUser : NSObject
 
 /** idstr	string	字符串型的用户UID*/
@@ -23,6 +33,8 @@
 @property (nonatomic, assign) int mbrank;
 /** vip*/
 @property (nonatomic, assign, getter=isVip) BOOL vip;
+/** 认证类型*/
+@property (nonatomic, assign) ZCUserVerifiedType verified_type;
 
 
 @end

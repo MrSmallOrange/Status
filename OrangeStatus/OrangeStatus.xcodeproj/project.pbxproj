@@ -47,6 +47,8 @@
 		3793CAC91CCBAAEA00ED486F /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3793CAB91CCBAAEA00ED486F /* UIView+WebCacheOperation.m */; };
 		37B7FFC81CD0A850005D4236 /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 37B7FFC71CD0A850005D4236 /* NSString+Extension.m */; };
 		37B7FFCB1CD0B3F2005D4236 /* ZCStatusPhotosView.m in Sources */ = {isa = PBXBuildFile; fileRef = 37B7FFCA1CD0B3F2005D4236 /* ZCStatusPhotosView.m */; };
+		37B7FFCE1CD0E425005D4236 /* ZCStatusPhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 37B7FFCD1CD0E425005D4236 /* ZCStatusPhotoView.m */; };
+		37B7FFD11CD0F110005D4236 /* ZCIconView.m in Sources */ = {isa = PBXBuildFile; fileRef = 37B7FFD01CD0F110005D4236 /* ZCIconView.m */; };
 		37CA633E1CCBB22700C6F230 /* ZCUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 37CA633D1CCBB22700C6F230 /* ZCUser.m */; };
 		37CA63411CCBB23600C6F230 /* ZCStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 37CA63401CCBB23600C6F230 /* ZCStatus.m */; };
 		37D120911CCB462C00CC2E28 /* ZCAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D120901CCB462C00CC2E28 /* ZCAccount.m */; };
@@ -163,6 +165,10 @@
 		37B7FFC71CD0A850005D4236 /* NSString+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extension.m"; sourceTree = "<group>"; };
 		37B7FFC91CD0B3F2005D4236 /* ZCStatusPhotosView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCStatusPhotosView.h; sourceTree = "<group>"; };
 		37B7FFCA1CD0B3F2005D4236 /* ZCStatusPhotosView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCStatusPhotosView.m; sourceTree = "<group>"; };
+		37B7FFCC1CD0E425005D4236 /* ZCStatusPhotoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCStatusPhotoView.h; sourceTree = "<group>"; };
+		37B7FFCD1CD0E425005D4236 /* ZCStatusPhotoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCStatusPhotoView.m; sourceTree = "<group>"; };
+		37B7FFCF1CD0F110005D4236 /* ZCIconView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCIconView.h; sourceTree = "<group>"; };
+		37B7FFD01CD0F110005D4236 /* ZCIconView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCIconView.m; sourceTree = "<group>"; };
 		37CA633C1CCBB22700C6F230 /* ZCUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCUser.h; sourceTree = "<group>"; };
 		37CA633D1CCBB22700C6F230 /* ZCUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCUser.m; sourceTree = "<group>"; };
 		37CA633F1CCBB23600C6F230 /* ZCStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCStatus.h; sourceTree = "<group>"; };
@@ -243,6 +249,8 @@
 				37308E591CC9EC910086B7DD /* ZCSearchBar.m */,
 				37308E5B1CC9F2E30086B7DD /* ZCDropDownMenu.h */,
 				37308E5C1CC9F2E30086B7DD /* ZCDropDownMenu.m */,
+				37B7FFCF1CD0F110005D4236 /* ZCIconView.h */,
+				37B7FFD01CD0F110005D4236 /* ZCIconView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -435,6 +443,8 @@
 				37ECB4E11CCE641500E6FA94 /* ZCStatusToolbar.m */,
 				37B7FFC91CD0B3F2005D4236 /* ZCStatusPhotosView.h */,
 				37B7FFCA1CD0B3F2005D4236 /* ZCStatusPhotosView.m */,
+				37B7FFCC1CD0E425005D4236 /* ZCStatusPhotoView.h */,
+				37B7FFCD1CD0E425005D4236 /* ZCStatusPhotoView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -857,6 +867,7 @@
 				37B7FFCB1CD0B3F2005D4236 /* ZCStatusPhotosView.m in Sources */,
 				37EFB0C11CCB2A4700C17723 /* ZCOAuthController.m in Sources */,
 				378E46761CC8BA2A00DE8EF5 /* ZCProfileController.m in Sources */,
+				37B7FFD11CD0F110005D4236 /* ZCIconView.m in Sources */,
 				378E461B1CC8ACFA00DE8EF5 /* main.m in Sources */,
 				37EBA28C1CD093EF00712829 /* NSDate+Extension.m in Sources */,
 				378E46671CC8B9BF00DE8EF5 /* ZCDiscoverController.m in Sources */,
@@ -866,6 +877,7 @@
 				37136B951CC9016C0052A2EA /* UIBarButtonItem+Extension.m in Sources */,
 				3793CAC21CCBAAEA00ED486F /* SDWebImagePrefetcher.m in Sources */,
 				3793CAC61CCBAAEA00ED486F /* UIImage+WebP.m in Sources */,
+				37B7FFCE1CD0E425005D4236 /* ZCStatusPhotoView.m in Sources */,
 				3793CAC11CCBAAEA00ED486F /* SDWebImageManager.m in Sources */,
 				3793CABB1CCBAAEA00ED486F /* NSData+ImageContentType.m in Sources */,
 				37136B8B1CC8E8670052A2EA /* UIImage+Extension.m in Sources */,

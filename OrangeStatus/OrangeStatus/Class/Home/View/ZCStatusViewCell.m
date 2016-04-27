@@ -14,12 +14,14 @@
 #import "ZCPhoto.h"
 #import "ZCStatusToolbar.h"
 #import "ZCStatusPhotosView.h"
+#import "ZCIconView.h"
+
 
 @interface ZCStatusViewCell ()
 /** 原创微博*/
 @property (nonatomic, weak) UIView *originalView;
 /** 头像*/
-@property (nonatomic, weak) UIImageView *iconView;
+@property (nonatomic, weak) ZCIconView *iconView;
 /** 会员图标*/
 @property (nonatomic, weak) UIImageView *vipView;
 /** 配图*/
@@ -82,7 +84,7 @@
     self.originalView = originalView;
     
     
-    UIImageView *iconView = [[UIImageView alloc] init];
+    ZCIconView *iconView = [[ZCIconView alloc] init];
     [originalView addSubview:iconView];
     self.iconView = iconView;
     
@@ -95,7 +97,6 @@
     
     ZCStatusPhotosView *photosView = [[ZCStatusPhotosView alloc] init];
     [originalView addSubview:photosView];
-    photosView.backgroundColor = [UIColor redColor];
     self.photosView = photosView;
     
     
@@ -172,8 +173,7 @@
     self.originalView.frame = statusFrame.originalViewFrame;
     
     self.iconView.frame = statusFrame.iconFrame;
-    [self.iconView sd_setImageWithURL:[NSURL URLWithString:user.profile_image_url] placeholderImage:[UIImage imageNamed:@"avatar_default_small"]];
-    
+    self.iconView.user = user;
     
     
     if (user.isVip) {
@@ -194,8 +194,7 @@
 //        ZCPhoto *photo = status.pic_urls[0];
         
         self.photosView.frame = statusFrame.photosViewFrame;
-#warning 设置图片
-        
+        self.photosView.photos = status.pic_urls;
         self.photosView.hidden = NO;
         
     }else{
@@ -243,8 +242,7 @@
         
         
         if (retweeted_status.pic_urls.count) {
-            
-#warning 设置图片
+            self.retweetPhotosView.photos = retweeted_status.pic_urls;
             self.retweetPhotosView.frame = statusFrame.retweetPhotosViewFrame;
             self.retweetPhotosView.hidden = NO;
             

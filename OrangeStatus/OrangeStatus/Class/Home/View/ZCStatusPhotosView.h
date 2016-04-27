@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface ZCStatusPhotosView : UIView
-
+/** 图片路径模型数组*/
+@property (nonatomic, weak) NSArray *photos;
++ (CGSize)sizeWithPhotosCount:(NSInteger)count;
 @end

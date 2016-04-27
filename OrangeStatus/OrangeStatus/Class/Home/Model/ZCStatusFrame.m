@@ -10,6 +10,8 @@
 #import "ZCUser.h"
 #import "ZCStatus.h"
 #import "ZCPhoto.h"
+#import "ZCStatusPhotosView.h"
+
 
 
 @implementation ZCStatusFrame
@@ -30,7 +32,6 @@
     CGFloat nameX = CGRectGetMaxX(self.iconFrame) + ZCStatusCellBorderWidth;
     CGFloat nameY = iconY;
     CGSize nameSize = [user.name sizeWithFont:ZCStatusCellNameFont];
-//    CGSize nameSize = [self sizeWithText:user.name font:ZCStatusCellNameFont];
     self.nameLabelFrame  = (CGRect){{nameX, nameY}, nameSize};
     
     if (user.isVip) {
@@ -47,6 +48,7 @@
     CGSize timeSize = [status.created_at sizeWithFont:ZCStatusCellTimeFont];
     self.timeLabelFrame  = (CGRect){{timeX, timeY}, timeSize};
 
+    
     CGFloat sourceX = CGRectGetMaxX(self.timeLabelFrame) + ZCStatusCellBorderWidth;
     CGFloat sourceY = timeY;
     CGSize sourceSize = [status.source sizeWithFont:ZCStatusCellSourceFont];
@@ -57,16 +59,19 @@
     CGFloat contentY = MAX(CGRectGetMaxY(self.iconFrame), CGRectGetMaxY(self.timeLabelFrame));
     CGFloat maxWidth = cellWidth - 2 * ZCStatusCellBorderWidth;
     CGSize contentSize = [status.text sizeWithFont:ZCStatusCellContentFont maxWidth:maxWidth];
-//    CGSize contentSize = [self sizeWithText:status.text font:ZCStatusCellContentFont maxWidth:maxWidth];
     self.contentLabelFrame  = (CGRect){{contentX, contentY}, contentSize};
     
     
     CGFloat originalHeight = 0;
+    //设置转发微博配图frame
     if (status.pic_urls.count) {
-        CGFloat photoWH = 80;
-        CGFloat photoX = contentX;
-        CGFloat photoY = CGRectGetMaxY(self.contentLabelFrame) + ZCStatusCellBorderWidth;
-        self.photosViewFrame = CGRectMake(photoX, photoY, photoWH, photoWH);
+        
+        CGFloat photosX = contentX;
+        CGFloat photosY = CGRectGetMaxY(self.contentLabelFrame) + ZCStatusCellBorderWidth;
+        CGSize photosSize = [ZCStatusPhotosView sizeWithPhotosCount:status.pic_urls.count];
+        self.photosViewFrame = (CGRect){{photosX, photosY}, photosSize};
+
+        
         originalHeight = CGRectGetMaxY(self.photosViewFrame) + ZCStatusCellBorderWidth;
     }else{
         originalHeight = CGRectGetMaxY(self.contentLabelFrame) + ZCStatusCellBorderWidth;
@@ -79,6 +84,7 @@
     self.originalViewFrame = CGRectMake(originalX, originalY, originalWidth, originalHeight);
     
     CGFloat toolbarY = 0;
+    
     if (status.retweeted_status) {
         
         ZCStatus *retweeted_status = status.retweeted_status;
@@ -89,16 +95,19 @@
         CGFloat retweetContentX = ZCStatusCellBorderWidth;
         CGFloat retweetContentY = ZCStatusCellBorderWidth;
         CGSize retweetContentSize = [retweetContent sizeWithFont:ZCStatusCellRetweetContentFont maxWidth:maxWidth];
-//        CGSize retweetContentSize = [self sizeWithText:retweetContent font:ZCStatusCellRetweetContentFont maxWidth:maxWidth];
         self.retweetContentLabelFrame  = (CGRect){{retweetContentX, retweetContentY}, retweetContentSize};
         
         CGFloat retweetViewHeight = 0;
+        
+        
+        //设置转发微博配图frame
         if (retweeted_status.pic_urls.count) {
             
-            CGFloat retweetPhotoWH = 50;
-            CGFloat retweetPhotoX = retweetContentX;
-            CGFloat retweetPhotoY = CGRectGetMaxY(self.retweetContentLabelFrame) + ZCStatusCellBorderWidth;
-            self.retweetPhotosViewFrame = CGRectMake(retweetPhotoX, retweetPhotoY, retweetPhotoWH, retweetPhotoWH);
+            CGFloat retweetPhotosX = retweetContentX;
+            CGFloat retweetPhotosY = CGRectGetMaxY(self.retweetContentLabelFrame) + ZCStatusCellBorderWidth;
+            CGSize retweetPhotosSize = [ZCStatusPhotosView sizeWithPhotosCount:retweeted_status.pic_urls.count];
+            self.retweetPhotosViewFrame = (CGRect){{retweetPhotosX, retweetPhotosY}, retweetPhotosSize};
+
         
             
             
@@ -129,4 +138,6 @@
 
     
 }
+
+
 @end
