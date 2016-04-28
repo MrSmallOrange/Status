@@ -15,6 +15,7 @@
 #import "ZCNavigaionController.h"
 #import "UIImage+Extension.h"
 #import "ZCTabBar.h"
+#import "ZCComposeViewController.h"
 
 @interface ZCTabBarController () <ZCTabBarDelegate>
 
@@ -97,9 +98,9 @@
 #pragma  mark - ZCTabBarDelegate
 - (void)tabBarDidClickPlusButton:(ZCTabBar *)tabBar
 {
-    UIViewController *vc = [[UIViewController alloc] init];
-    vc.view.backgroundColor = [UIColor redColor];
-    [self presentViewController:vc animated:YES completion:nil];
+    ZCComposeViewController *composeController = [[ZCComposeViewController alloc] init];
+    ZCNavigaionController *navigationController = [[ZCNavigaionController alloc] initWithRootViewController:composeController];
+    [self presentViewController:navigationController animated:YES completion:nil];
 }
 
 

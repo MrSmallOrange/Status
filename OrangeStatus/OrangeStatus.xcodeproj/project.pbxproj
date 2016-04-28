@@ -54,12 +54,16 @@
 		37D120911CCB462C00CC2E28 /* ZCAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D120901CCB462C00CC2E28 /* ZCAccount.m */; };
 		37D120951CCB4AEF00CC2E28 /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D120941CCB4AEF00CC2E28 /* MBProgressHUD+MJ.m */; };
 		37D120991CCB521300CC2E28 /* ZCAccountTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D120981CCB521300CC2E28 /* ZCAccountTool.m */; };
+		37E234FD1CD1B8E4003EEF2E /* ZCComposeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E234FC1CD1B8E4003EEF2E /* ZCComposeViewController.m */; };
+		37E235001CD1D21C003EEF2E /* ZCTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E234FF1CD1D21C003EEF2E /* ZCTextView.m */; };
 		37EBA28C1CD093EF00712829 /* NSDate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 37EBA28B1CD093EF00712829 /* NSDate+Extension.m */; };
 		37ECB4E21CCE641500E6FA94 /* ZCStatusToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 37ECB4E11CCE641500E6FA94 /* ZCStatusToolbar.m */; };
 		37EFB0C11CCB2A4700C17723 /* ZCOAuthController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37EFB0C01CCB2A4700C17723 /* ZCOAuthController.m */; };
 		37F165831CCC649000C998E0 /* ZCLoadMoreFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 37F165821CCC649000C998E0 /* ZCLoadMoreFooter.m */; };
 		37F165871CCC652D00C998E0 /* ZCLoadMoreFooter.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37F165861CCC652D00C998E0 /* ZCLoadMoreFooter.xib */; };
 		37F3DE041CCDBEFB002B38E4 /* ZCPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 37F3DE031CCDBEFB002B38E4 /* ZCPhoto.m */; };
+		37FB21411CD22B4700E9AC4C /* ZCComposeToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 37FB21401CD22B4700E9AC4C /* ZCComposeToolBar.m */; };
+		37FB21441CD2491000E9AC4C /* ZCComposePhotosView.m in Sources */ = {isa = PBXBuildFile; fileRef = 37FB21431CD2491000E9AC4C /* ZCComposePhotosView.m */; };
 		582315994CF84AF71259385E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8249A114EE53A17EF449A56E /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -179,6 +183,10 @@
 		37D120941CCB4AEF00CC2E28 /* MBProgressHUD+MJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+MJ.m"; sourceTree = "<group>"; };
 		37D120971CCB521300CC2E28 /* ZCAccountTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCAccountTool.h; sourceTree = "<group>"; };
 		37D120981CCB521300CC2E28 /* ZCAccountTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCAccountTool.m; sourceTree = "<group>"; };
+		37E234FB1CD1B8E4003EEF2E /* ZCComposeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCComposeViewController.h; sourceTree = "<group>"; };
+		37E234FC1CD1B8E4003EEF2E /* ZCComposeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCComposeViewController.m; sourceTree = "<group>"; };
+		37E234FE1CD1D21C003EEF2E /* ZCTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCTextView.h; sourceTree = "<group>"; };
+		37E234FF1CD1D21C003EEF2E /* ZCTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCTextView.m; sourceTree = "<group>"; };
 		37EBA28A1CD093EF00712829 /* NSDate+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Extension.h"; sourceTree = "<group>"; };
 		37EBA28B1CD093EF00712829 /* NSDate+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Extension.m"; sourceTree = "<group>"; };
 		37ECB4E01CCE641500E6FA94 /* ZCStatusToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCStatusToolbar.h; sourceTree = "<group>"; };
@@ -190,6 +198,10 @@
 		37F165861CCC652D00C998E0 /* ZCLoadMoreFooter.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZCLoadMoreFooter.xib; sourceTree = "<group>"; };
 		37F3DE021CCDBEFB002B38E4 /* ZCPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCPhoto.h; sourceTree = "<group>"; };
 		37F3DE031CCDBEFB002B38E4 /* ZCPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCPhoto.m; sourceTree = "<group>"; };
+		37FB213F1CD22B4700E9AC4C /* ZCComposeToolBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCComposeToolBar.h; sourceTree = "<group>"; };
+		37FB21401CD22B4700E9AC4C /* ZCComposeToolBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCComposeToolBar.m; sourceTree = "<group>"; };
+		37FB21421CD2491000E9AC4C /* ZCComposePhotosView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZCComposePhotosView.h; sourceTree = "<group>"; };
+		37FB21431CD2491000E9AC4C /* ZCComposePhotosView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZCComposePhotosView.m; sourceTree = "<group>"; };
 		8249A114EE53A17EF449A56E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		852B2C352667A9315195F049 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		AF1BABFCAADD62A2207024F6 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -251,6 +263,8 @@
 				37308E5C1CC9F2E30086B7DD /* ZCDropDownMenu.m */,
 				37B7FFCF1CD0F110005D4236 /* ZCIconView.h */,
 				37B7FFD01CD0F110005D4236 /* ZCIconView.m */,
+				37E234FE1CD1D21C003EEF2E /* ZCTextView.h */,
+				37E234FF1CD1D21C003EEF2E /* ZCTextView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -351,6 +365,7 @@
 		378E464C1CC8B93E00DE8EF5 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				37E234F91CD1B8CB003EEF2E /* Compose */,
 				37EFB0BD1CCB2A1000C17723 /* OAuth */,
 				37308E5E1CCA13DA0086B7DD /* Newfeature */,
 				378E464D1CC8B93E00DE8EF5 /* Discover */,
@@ -623,6 +638,24 @@
 			path = Tool;
 			sourceTree = "<group>";
 		};
+		37E234F91CD1B8CB003EEF2E /* Compose */ = {
+			isa = PBXGroup;
+			children = (
+				37FB213E1CD22B2800E9AC4C /* View */,
+				37E234FA1CD1B8CB003EEF2E /* Cotroller */,
+			);
+			path = Compose;
+			sourceTree = "<group>";
+		};
+		37E234FA1CD1B8CB003EEF2E /* Cotroller */ = {
+			isa = PBXGroup;
+			children = (
+				37E234FB1CD1B8E4003EEF2E /* ZCComposeViewController.h */,
+				37E234FC1CD1B8E4003EEF2E /* ZCComposeViewController.m */,
+			);
+			path = Cotroller;
+			sourceTree = "<group>";
+		};
 		37EFB0BD1CCB2A1000C17723 /* OAuth */ = {
 			isa = PBXGroup;
 			children = (
@@ -640,6 +673,17 @@
 				37EFB0C01CCB2A4700C17723 /* ZCOAuthController.m */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		37FB213E1CD22B2800E9AC4C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				37FB213F1CD22B4700E9AC4C /* ZCComposeToolBar.h */,
+				37FB21401CD22B4700E9AC4C /* ZCComposeToolBar.m */,
+				37FB21421CD2491000E9AC4C /* ZCComposePhotosView.h */,
+				37FB21431CD2491000E9AC4C /* ZCComposePhotosView.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		59324189E59CD667559ADA4B /* Frameworks */ = {
@@ -850,6 +894,7 @@
 				37136B981CC90B0C0052A2EA /* ZCTitleButton.m in Sources */,
 				37308E5D1CC9F2E30086B7DD /* ZCDropDownMenu.m in Sources */,
 				3793CABD1CCBAAEA00ED486F /* SDWebImageCompat.m in Sources */,
+				37E235001CD1D21C003EEF2E /* ZCTextView.m in Sources */,
 				37CA633E1CCBB22700C6F230 /* ZCUser.m in Sources */,
 				3793CABC1CCBAAEA00ED486F /* SDImageCache.m in Sources */,
 				3793CAC51CCBAAEA00ED486F /* UIImage+MultiFormat.m in Sources */,
@@ -876,11 +921,14 @@
 				378E46701CC8B9FF00DE8EF5 /* ZCTabBarController.m in Sources */,
 				37136B951CC9016C0052A2EA /* UIBarButtonItem+Extension.m in Sources */,
 				3793CAC21CCBAAEA00ED486F /* SDWebImagePrefetcher.m in Sources */,
+				37FB21441CD2491000E9AC4C /* ZCComposePhotosView.m in Sources */,
 				3793CAC61CCBAAEA00ED486F /* UIImage+WebP.m in Sources */,
 				37B7FFCE1CD0E425005D4236 /* ZCStatusPhotoView.m in Sources */,
+				37E234FD1CD1B8E4003EEF2E /* ZCComposeViewController.m in Sources */,
 				3793CAC11CCBAAEA00ED486F /* SDWebImageManager.m in Sources */,
 				3793CABB1CCBAAEA00ED486F /* NSData+ImageContentType.m in Sources */,
 				37136B8B1CC8E8670052A2EA /* UIImage+Extension.m in Sources */,
+				37FB21411CD22B4700E9AC4C /* ZCComposeToolBar.m in Sources */,
 				37ECB4E21CCE641500E6FA94 /* ZCStatusToolbar.m in Sources */,
 				378E46731CC8BA1700DE8EF5 /* ZCMessageController.m in Sources */,
 				37136B921CC8FEDD0052A2EA /* ZCTabBar.m in Sources */,

@@ -98,7 +98,6 @@
      */
     
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    
   
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
     parameters[@"client_id"] = @"3288281858";
